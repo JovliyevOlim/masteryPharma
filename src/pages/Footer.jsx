@@ -1,0 +1,65 @@
+import React from 'react';
+import logoDark from "../assets/img/logo/mastery_logo_dark-removebg.png"
+import logo from "../assets/img/logo/mastery_logo.jpg";
+import {routes} from "../routes.js";
+import {useTranslation} from "react-i18next";
+
+const Footer = () => {
+    const {t, i18n} = useTranslation();
+
+    return (
+        <div className="container-fluid bg-dark text-light footer my-6 mb-0 py-6 wow fadeIn" data-wow-delay="0.1s">
+            <div className="container">
+                <div className="row g-5">
+                    {/* Contact Info */}
+                    <div className="col-lg-4 col-md-4">
+                        <h2 className="text-primary mb-4">
+                            <img src={logoDark} width={140} height={52} className='img-fluid' alt="logo"/>
+                        </h2>
+                        <p className="mb-2">
+                            <i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
+                        </p>
+                        <p className="mb-2">
+                            <i className="fa fa-phone-alt me-3"></i>+012 345 67890
+                        </p>
+                        <p className="mb-2">
+                            <i className="fa fa-envelope me-3"></i>info@example.com
+                        </p>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div className="col-lg-4 col-md-4">
+                        <h4 className="text-light mb-4">{t("quickLinks")}</h4>
+                        {
+                            routes.map((route, index) =>
+                                <a className="btn btn-link" key={index} href={route.path}> {t(`${route.name}`)}</a>
+                            )
+                        }
+                    </div>
+
+
+                    {/* Newsletter */}
+                    <div className="col-lg-4 col-md-4">
+                        <h4 className="text-light mb-4">{t("followUs")}</h4>
+                        <div className="d-flex pt-2">
+                            <a target='_blank' rel="noopener noreferrer"
+                               className="btn btn-square btn-outline-light me-1"
+                               href="https://www.instagram.com/mastery.pharma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
+                                className="fab fa-instagram"></i></a>
+                            <a target='_blank' rel="noopener noreferrer"
+                               className="btn btn-square btn-outline-light me-1"
+                               href="https://t.me/MASTERYpharma"><i
+                                className="fab fa-telegram"></i></a>
+                            <a target='_blank' className="btn btn-square btn-outline-light me-1" href="#"><i
+                                className="fab fa-youtube"></i></a>
+                            {/*<a className="btn btn-square btn-outline-light me-0" href="#"><i*/}
+                            {/*    className="fab fa-linkedin-in"></i></a>*/}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Footer;
