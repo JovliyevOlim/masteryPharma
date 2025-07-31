@@ -5,8 +5,8 @@ const LanguageDropdown = () => {
     const {t, i18n} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
-    const [flag, setFlag] = useState('flag-icon-uz');
-    const [language, setLanguage] = useState("O'zbek");
+    const [flag, setFlag] = useState('flag-icon-ru');
+    const [language, setLanguage] = useState("Русский");
 
     const handleChangeLanguage = (lng) => {
         i18n.changeLanguage(lng.value);
