@@ -5,6 +5,7 @@ import team3 from '../assets/img/teacher3.png'
 import team4 from '../assets/img/teacher4.png'
 import {useTranslation} from "react-i18next";
 import AOS from 'aos';
+import {Link} from "react-router-dom";
 
 
 const Team = () => {
@@ -49,24 +50,22 @@ const Team = () => {
                                          src={member.img}
                                          alt="Team member"/>
                                     <div className="team-social text-center">
-                                        <a
-                                            className="btn btn-square btn-outline-primary border-2 m-1"
-                                            href="#"
-                                        >
-                                            <i className="fab fa-facebook-f"></i>
-                                        </a>
-                                        <a
-                                            className="btn btn-square btn-outline-primary border-2 m-1"
-                                            href="#"
-                                        >
-                                            <i className="fab fa-twitter"></i>
-                                        </a>
-                                        <a
-                                            className="btn btn-square btn-outline-primary border-2 m-1"
-                                            href="#"
-                                        >
-                                            <i className="fab fa-instagram"></i>
-                                        </a>
+                                        <Link to={`/team/${member.id}`}
+                                              className="btn btn-square w-50 btn-outline-primary border-2 m-1">
+                                            Read More
+                                        </Link>
+                                        {/*<a*/}
+                                        {/*    className="btn btn-square btn-outline-primary border-2 m-1"*/}
+                                        {/*    href="#"*/}
+                                        {/*>*/}
+                                        {/*    <i className="fab fa-twitter"></i>*/}
+                                        {/*</a>*/}
+                                        {/*<a*/}
+                                        {/*    className="btn btn-square btn-outline-primary border-2 m-1"*/}
+                                        {/*    href="#"*/}
+                                        {/*>*/}
+                                        {/*    <i className="fab fa-instagram"></i>*/}
+                                        {/*</a>*/}
                                     </div>
                                 </div>
                                 <div className="bg-light text-center p-4 team-info">

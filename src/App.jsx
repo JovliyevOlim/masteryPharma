@@ -6,6 +6,7 @@ import ScrollToTop from "./pages/ScrollToTop.jsx";
 import Navbar from "./pages/Navbar.jsx";
 import AppLayout from "./pages/AppLayout.jsx";
 import Footer from "./pages/Footer.jsx";
+import TeacherDetails from "./pages/TeacherDetails.jsx";
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const About = lazy(() => import('./pages/About'));
@@ -25,6 +26,7 @@ function App() {
                     <Route path="/about" element={<About/>}/>
                     <Route path="/courses" element={<Courses/>}/>
                     <Route path="/contact/:id" element={<Contact/>}/>
+                    <Route path="/team/:id" element={<TeacherDetails/>}/>
                     <Route path="*" element={<div>404 Not Found</div>}/>
                 </Route>
             </Routes>
