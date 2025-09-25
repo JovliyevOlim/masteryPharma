@@ -7,20 +7,18 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import MakeAppoinment from "./MakeAppoinment.jsx";
 import {useTranslation} from "react-i18next";
+import CourseDirections from "./CourseDirections.jsx";
 
 const CoursesSection = () => {
     const {t, i18n} = useTranslation();
     const {data: courses = [], isLoading} = useGetCoursesQuery();
 
-    console.log(courses);
     useEffect(() => {
         AOS.init({duration: 800, once: true});
     }, []);
 
     function formatNumber(num) {
-        // Sonni stringga aylantiramiz va raqamlarni ajratish uchun regexdan foydalanamiz
         const numStr = num.toString();
         const formatted = numStr.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 '); // Raqamlar orasiga bo'shliq qo'shamiz
         return formatted;
@@ -33,13 +31,14 @@ const CoursesSection = () => {
                     className="text-center mx-auto mb-5"
                     data-aos="fade-up"
                     data-aos-duration={'500'}
-                    style={{maxWidth: '500px'}}
+                    style={{maxWidth: '800px'}}
                 >
-                    <h6 className="text-primary text-uppercase mb-2">Tranding Courses</h6>
-                    <h1 className="display-6 mb-4">
-                        Our Courses Upskill You With Driving Training
-                    </h1>
+                    <h6 className="text-primary text-uppercase mb-2">{t("ourWays")}</h6>
+                    <h2 className="mb-4">
+                        {t("ourWaysAbout")}
+                    </h2>
                 </div>
+                <CourseDirections/>
                 <Swiper
                     modules={[Autoplay, Navigation, Pagination]}
                     spaceBetween={0}

@@ -1,7 +1,7 @@
 import React from 'react';
-import PageHeader from "./PageHeader";
-import AboutStart from "./AboutStart";
-import TeamStarts from "./TeamStarts";
+import PageHeader from "../components/PageHeader.jsx";
+import AboutStart from "../components/AboutStart.jsx";
+import TeamStarts from "../components/TeamStarts.jsx";
 import {useTranslation} from "react-i18next";
 
 function About(props) {

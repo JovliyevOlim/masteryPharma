@@ -36,25 +36,24 @@ const LanguageDropdown = () => {
 
     return (
         <div className="dropdown nav-item" ref={dropdownRef}>
-            <a
-                className="nav-link dropdown-toggle"
-                href="#"
+            <button
+                type="button"
+                className="nav-link bg-transparent border-0 dropdown-toggle"
                 onClick={toggleDropdown}
                 id="Dropdown"
                 role="button"
-                aria-expanded={isOpen}
             >
                 <i className={`flag-icon ${flag} me-1`}></i>
                 {language}
-            </a>
+            </button>
 
             {isOpen && (
                 <ul className="dropdown-menu dropdown-menu-lg-start show" aria-labelledby="Dropdown">
 
                     {
                         languages.filter(item => item.value !== i18n.language).map((l) =>
-                            <li><a onClick={() => handleChangeLanguage(l)} className="dropdown-item" href="#"><i
-                                className={`me-1 flag-icon ${l?.flags}`}></i>{l?.name}</a>
+                            <li><button onClick={() => handleChangeLanguage(l)} className="dropdown-item"><i
+                                className={`me-1 flag-icon ${l?.flags}`}></i>{l?.name}</button>
                             </li>
                         )
                     }

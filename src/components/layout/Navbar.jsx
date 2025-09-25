@@ -1,16 +1,13 @@
 import {useTranslation} from "react-i18next";
 import {Link, NavLink} from "react-router-dom";
-import logo from "../assets/img/logo/mastery_logo.jpg";
-import {routes} from "../routes";
+import logo from "../../assets/img/logo/mastery_logo.jpg";
+import {routes} from "../../routes.js";
 import React, {useState} from "react";
-import LanguageDropdown from "./LanguageDropdown.jsx";
+import LanguageDropdown from "../LanguageDropdown.jsx";
 
 function Navbar() {
     const {t, i18n} = useTranslation();
 
-    const handleChangeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-    };
 
     const [isOpen, setIsOpen] = useState(false);
 

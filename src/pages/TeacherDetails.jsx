@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from "react-router-dom";
-import PageHeader from "./PageHeader.jsx";
+import PageHeader from "../components/PageHeader.jsx";
 import {useTranslation} from "react-i18next";
 import {getTeachersById} from "../assets/data/teacher.js";
 
@@ -10,7 +10,14 @@ function TeacherDetails() {
 
     const teacher = getTeachersById(id)
 
-    console.log(teacher)
+
+    const teacherDetails = [
+        ['teacherOneBodyOne', "teacherOneBodyTwo", "teacherOneBodyThree"],
+        ['teacherTwoBodyOne', "teacherTwoBodyTwo", "teacherTwoBodyThree"],
+        ['teacherThreeBodyOne', "teacherThreeBodyTwo", "teacherThreeBodyThree", "teacherThreeBodyFour"],
+        ['teacherFourBodyOne', "teacherFourBodyTwo", "teacherFourBodyThree", "teacherFourBodyFour", "teacherFourBodyFive"],
+    ]
+
     return (
         <>
             <PageHeader title={t('teacher')}/>
@@ -34,16 +41,12 @@ function TeacherDetails() {
                         {/* Contact Form */}
                         <div className="col-lg-8" data-aos="fade-up"
                              data-aos-delay='0.5s'>
-                            <h6 className="text-primary text-uppercase mb-2">{t(`trainergit${id}`)}</h6>
-                            <h1 className="display-6 mb-4">If You are interested, Please Contact Us</h1>
-                            {/*<p className="mb-4">*/}
-                            {/*    The contact form is currently inactive. Get a functional and working contact form with*/}
-                            {/*    Ajax & PHP in a few*/}
-                            {/*    minutes. Just copy and paste the files, add a little code and you're done.{' '}*/}
-                            {/*    <a href="https://htmlcodex.com/contact-form" target="_blank" rel="noopener noreferrer">*/}
-                            {/*        Download Now*/}
-                            {/*    </a>.*/}
-                            {/*</p>*/}
+                            <h2 className="text-primary text-uppercase mb-2">{t(`trainer${id}`)}</h2>
+                            {
+                                teacherDetails[id - 1].map((item, index) =>
+                                    <h5 key={index} className="mb-3">{t(`${item}`)}</h5>
+                                )
+                            }
                         </div>
                     </div>
                 </div>

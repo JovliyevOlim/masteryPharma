@@ -73,7 +73,7 @@ const AboutUs = () => {
                             <div className="row g-4">
                                 <div className="col-sm-6">
                                     <a className="btn btn-primary py-3 px-5" href="">
-                                        Read More
+                                        {t("readMore")}
                                     </a>
                                 </div>
                                 <div className="col-sm-6">

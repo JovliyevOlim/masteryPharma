@@ -1,6 +1,6 @@
 import React from 'react';
-import PageHeader from "./PageHeader";
-import CourseStart from "./CourseStart";
+import PageHeader from "../components/PageHeader.jsx";
+import CourseStart from "../components/CourseStart.jsx";
 import {useTranslation} from "react-i18next";
 
 function Courses(props) {

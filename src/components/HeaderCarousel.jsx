@@ -7,6 +7,7 @@ import 'swiper/css/autoplay';
 import carousel1 from "../assets/img/carousel-1.jpg"
 import carousel2 from "../assets/img/carousel-2.jpg"
 import {useTranslation} from "react-i18next";
+import {Link} from "react-router-dom";
 
 const HeaderCarousel = () => {
     const {t, i18n} = useTranslation();
@@ -51,9 +52,10 @@ const HeaderCarousel = () => {
                                                 {slide.title}
                                             </h1>
                                             <h5 className="text-light mb-5 animate__animated animate__slideInDown">{slide.title2}</h5>
-                                            <a href="#" className="btn btn-primary py-sm-3 px-sm-5">Learn More</a>
-                                            <a href="courses"
-                                               className="btn btn-light py-sm-3 px-sm-5 ms-3">{t("ourCourses")}</a>
+                                            <Link to="/about"
+                                                  className="btn btn-primary py-sm-3 px-sm-5">{t("learnMore")}</Link>
+                                            <Link to="/courses"
+                                                  className="btn btn-light py-sm-3 px-sm-5 ms-3">{t("ourCourses")}</Link>
                                         </div>
                                     </div>
                                 </div>

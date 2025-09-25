@@ -1,8 +1,8 @@
 import React from 'react';
-import logoDark from "../assets/img/logo/mastery_logo_dark-removebg.png"
-import logo from "../assets/img/logo/mastery_logo.jpg";
-import {routes} from "../routes.js";
+import logoDark from "../../assets/img/logo/mastery_logo_dark-removebg.png"
+import {routes} from "../../routes.js";
 import {useTranslation} from "react-i18next";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     const {t, i18n} = useTranslation();
@@ -32,7 +32,7 @@ const Footer = () => {
                         <h4 className="text-light mb-4">{t("quickLinks")}</h4>
                         {
                             routes.map((route, index) =>
-                                <a className="btn btn-link" key={index} href={route.path}> {t(`${route.name}`)}</a>
+                                <Link className="btn btn-link" key={index} to={route.path}> {t(`${route.name}`)}</Link>
                             )
                         }
                     </div>

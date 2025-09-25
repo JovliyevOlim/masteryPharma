@@ -52,20 +52,8 @@ const Team = () => {
                                     <div className="team-social text-center">
                                         <Link to={`/team/${member.id}`}
                                               className="btn btn-square w-50 btn-outline-primary border-2 m-1">
-                                            Read More
+                                            {t("readMore")}
                                         </Link>
-                                        {/*<a*/}
-                                        {/*    className="btn btn-square btn-outline-primary border-2 m-1"*/}
-                                        {/*    href="#"*/}
-                                        {/*>*/}
-                                        {/*    <i className="fab fa-twitter"></i>*/}
-                                        {/*</a>*/}
-                                        {/*<a*/}
-                                        {/*    className="btn btn-square btn-outline-primary border-2 m-1"*/}
-                                        {/*    href="#"*/}
-                                        {/*>*/}
-                                        {/*    <i className="fab fa-instagram"></i>*/}
-                                        {/*</a>*/}
                                     </div>
                                 </div>
                                 <div className="bg-light text-center p-4 team-info">

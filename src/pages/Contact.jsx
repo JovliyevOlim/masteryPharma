@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import PageHeader from "./PageHeader";
+import PageHeader from "../components/PageHeader.jsx";
 import {useTranslation} from "react-i18next";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';

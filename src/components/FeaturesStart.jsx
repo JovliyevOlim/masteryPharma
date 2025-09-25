@@ -2,8 +2,10 @@ import React, {useEffect} from 'react';
 import about1 from '../assets/img/about-1.jpg'
 import about2 from '../assets/img/about-2.jpg'
 import AOS from 'aos';
+import {useTranslation} from "react-i18next";
 
 const WhyChooseUs = () => {
+    const {t} = useTranslation();
 
     useEffect(() => {
         AOS.init({duration: 800, once: true});
@@ -16,22 +18,19 @@ const WhyChooseUs = () => {
                     <div className="col-lg-6"
                          data-aos="fade-up"
                          data-aos-delay={'100'}>
-                        <h6 className="text-primary text-uppercase mb-2">Why Choose Us!</h6>
-                        <h1 className="display-6 mb-4">
-                            Best Driving Training Agency In Your City
-                        </h1>
+                        <h6 className="text-primary text-uppercase mb-2">{t("whyChoose")}</h6>
+                        <h4 className="mb-4">
+                            {t("aboutCompany")}:
+                        </h4>
                         <p className="mb-5">
-                            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                            lorem sit clita duo justo magna dolore erat amet
+                            {t("aboutCompanyBody")}
                         </p>
 
                         <div className="row gy-5 gx-4">
                             {[
-                                {title: 'Fully Licensed', delay: '0.1s'},
-                                {title: 'Online Tracking', delay: '0.2s'},
-                                {title: 'Afordable Fee', delay: '0.3s'},
-                                {title: 'Best Trainers', delay: '0.4s'},
+                                {title: t('forWho1'), delay: '0.1s'},
+                                {title: t('forWho2'), delay: '0.2s'},
+                                {title: t('forWho3'), delay: '0.3s'},
                             ].map((item, i) => (
                                 <div
                                     className="col-sm-6"
@@ -45,9 +44,6 @@ const WhyChooseUs = () => {
                                         </div>
                                         <h5 className="mb-0">{item.title}</h5>
                                     </div>
-                                    <span>
-                    Magna sea eos sit dolor, ipsum amet ipsum lorem diam eos
-                  </span>
                                 </div>
                             ))}
                         </div>

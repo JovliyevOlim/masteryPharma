@@ -1,25 +1,22 @@
-import {lazy, useState} from 'react'
+import {lazy} from 'react'
 import {Route, Routes} from "react-router-dom";
 
 import './App.css'
-import ScrollToTop from "./pages/ScrollToTop.jsx";
-import Navbar from "./pages/Navbar.jsx";
-import AppLayout from "./pages/AppLayout.jsx";
-import Footer from "./pages/Footer.jsx";
-import TeacherDetails from "./pages/TeacherDetails.jsx";
+import Navbar from "./components/layout/Navbar.jsx";
+import AppLayout from "./components/layout/AppLayout.jsx";
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const About = lazy(() => import('./pages/About'));
 const Courses = lazy(() => import('./pages/Courses'));
 const Contact = lazy(() => import('./pages/Contact'));
+const TeacherDetails = lazy(() => import('./pages/TeacherDetails.jsx'));
+const Footer = lazy(() => import('./components/layout/Footer.jsx'));
 
 function App() {
-    const [count, setCount] = useState(0)
 
     return (
         <>
             <Navbar/>
-            <ScrollToTop/>
             <Routes>
                 <Route element={<AppLayout/>}>
                     <Route path="/" element={<HomePage/>}/>
