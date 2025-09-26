@@ -2,6 +2,8 @@ import React from 'react';
 import PageHeader from "../components/PageHeader.jsx";
 import CourseStart from "../components/CourseStart.jsx";
 import {useTranslation} from "react-i18next";
+import CourseHeader from "../components/CourseHeader.jsx";
+import CourseDirections from "../components/CourseDirections.jsx";
 
 function Courses(props) {
     const {t, i18n} = useTranslation();
@@ -9,7 +11,13 @@ function Courses(props) {
     return (
         <>
             <PageHeader title={t('courses')}/>
-            <CourseStart/>
+            <div className="container-xxl courses my-6 py-6 pb-0">
+                <div className="container">
+                    <CourseHeader/>
+                    <CourseDirections/>
+                    <CourseStart/>
+                </div>
+            </div>
         </>
     );
 }

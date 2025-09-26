@@ -19,9 +19,9 @@ const WhyChooseUs = () => {
                          data-aos="fade-up"
                          data-aos-delay={'100'}>
                         <h6 className="text-primary text-uppercase mb-2">{t("whyChoose")}</h6>
-                        <h4 className="mb-4">
+                        <h2 className="mb-4">
                             {t("aboutCompany")}:
-                        </h4>
+                        </h2>
                         <p className="mb-5">
                             {t("aboutCompanyBody")}
                         </p>

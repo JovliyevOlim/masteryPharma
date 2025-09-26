@@ -16,15 +16,18 @@ const Footer = () => {
                         <h2 className="text-primary mb-4">
                             <img src={logoDark} width={140} height={52} className='img-fluid' alt="logo"/>
                         </h2>
-                        <p className="mb-2">
-                            <i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA
-                        </p>
-                        <p className="mb-2">
-                            <i className="fa fa-phone-alt me-3"></i>+012 345 67890
-                        </p>
-                        <p className="mb-2">
-                            <i className="fa fa-envelope me-3"></i>info@example.com
-                        </p>
+                        <a href="tel:+998 93 590 93 39" className={'text-white'}>
+                            <p className="mb-2">
+                                <i className="fa fa-phone-alt me-3"></i>+998 93 590 93 39
+                            </p>
+                        </a>
+                        <a href="mailto:z.azizova@mastery-pharma.uz" className={'text-white'}>
+                            <p className="mb-2">
+                                <i className="fa fa-envelope me-3"></i>z.azizova@mastery-pharma.uz
+                            </p>
+                        </a>
+
+
                     </div>
 
                     {/* Quick Links */}

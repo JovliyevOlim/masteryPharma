@@ -6,6 +6,9 @@ import TestEmotional from "../components/TestEmotional.jsx";
 import CoursesSection from "../components/CourseStart.jsx";
 import FeaturesStart from "../components/FeaturesStart.jsx";
 import Team from "../components/TeamStarts.jsx";
+import CourseHeader from "../components/CourseHeader.jsx";
+import CourseDirections from "../components/CourseDirections.jsx";
+import CourseStart from "../components/CourseStart.jsx";
 
 function HomePage() {
 
@@ -18,7 +21,12 @@ function HomePage() {
             <HeaderCarousel/>
             <Facts/>
             <AboutUs/>
-            <CoursesSection/>
+            <div className="container-xxl courses my-6 py-6 pb-0">
+                <div className="container">
+                    <CourseHeader/>
+                    <CourseStart/>
+                </div>
+            </div>
             <FeaturesStart/>
             <Team/>
             <TestEmotional/>
