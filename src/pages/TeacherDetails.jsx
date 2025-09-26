@@ -17,22 +17,21 @@ function TeacherDetails() {
                     {
                         teachers.filter(item => id == item.id).map((teacher, index) =>
                             <div className="row g-5 mt-3">
-                                {/* Google Maps */}
                                 <div className="col-lg-4"
                                      data-aos="fade-up"
-                                     data-aos-delay={'0.1s'}
-                                     style={{minHeight: '450px', objectFit: 'cover'}}>
-                                    <div className="position-relative h-100">
+                                     data-aos-delay={'0.1s'}>
+                                    <div className="team-item">
                                         <img
-                                            className="position-relative w-100 h-100"
+                                            className="img-fluid team-image"
+                                            style={{height: '400px'}}
                                             src={teacher?.img}
-                                            style={{minHeight: '450px', border: 0}}
                                         />
                                     </div>
                                 </div>
 
                                 {/* Contact Form */}
-                                <div className="col-lg-8" data-aos="fade-up"
+                                <div className="col-lg-8"
+                                     data-aos="fade-up"
                                      data-aos-delay='0.5s'>
                                     <h2 className="text-primary text-uppercase mb-2">{t(teacher.name)}</h2>
                                     {
@@ -51,12 +50,12 @@ function TeacherDetails() {
                                 <div className="col-lg-4"
                                      data-aos="fade-up"
                                      data-aos-delay={'0.1s'}
-                                     style={{minHeight: '450px', objectFit: 'cover'}}>
-                                    <div className="position-relative h-100">
+                                >
+                                    <div className="team-item">
                                         <img
-                                            className="position-relative w-100 h-100"
+                                            className="img-fluid team-image"
+                                            style={{height: '400px'}}
                                             src={teacher?.img}
-                                            style={{minHeight: '450px', border: 0}}
                                         />
                                     </div>
                                 </div>
