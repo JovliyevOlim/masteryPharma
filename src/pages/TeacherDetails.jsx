@@ -6,7 +6,7 @@ import {teachers} from "../assets/data/teacher.js";
 
 function TeacherDetails() {
     const {id} = useParams()
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
 
 
     return (
@@ -15,7 +15,7 @@ function TeacherDetails() {
             <div className="container-xxl py-6">
                 <div className="container">
                     {
-                        teachers.filter(item => id == item.id).map((teacher, index) =>
+                        teachers.filter(item => id == item.id).map((teacher) =>
                             <div className="row g-5 mt-3">
                                 <div className="col-lg-4"
                                      data-aos="fade-up"
@@ -44,7 +44,7 @@ function TeacherDetails() {
                         )
                     }
                     {
-                        teachers.filter(item => id != item.id).map((teacher, index) =>
+                        teachers.filter(item => id != item.id).map((teacher) =>
                             <div className="row g-5 mt-3">
                                 {/* Google Maps */}
                                 <div className="col-lg-4"

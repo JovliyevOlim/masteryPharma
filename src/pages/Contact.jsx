@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import PageHeader from "../components/PageHeader.jsx";
 import {useTranslation} from "react-i18next";
 import {useFormik} from 'formik';
@@ -26,34 +26,36 @@ function Contact() {
         educationalFormat: true
     });
 
+    const validationSchema = useMemo(
+        () =>
+            Yup.object({
+                fullName: Yup.string().required(t("requiredFullName")),
+                phoneNumber: Yup.string()
+                    .required(t("requiredPhoneNumber"))
+                    .matches(/^[\d\+\-\s\(\)]+$/, t("invalidPhoneNumber")),
+                email: Yup.string()
+                    .email(t("invalidEmail"))
+                    .required(t("requiredEmail")),
+                companyName: Yup.string().required(t("requiredCompanyName")),
+                position: Yup.string().required(t("requiredPosition")),
+                region: Yup.string().required(t("requiredRegion")),
+                comment: Yup.string().max(500, t("maxComment")),
+            }),
+        [i18n.language] // 🔑 til o‘zgarganda qaytadan schema yaratiladi
+    );
+
+
 
     const validation = useFormik({
         // enableReinitialize : use this flag when initial values needs to be changed
         enableReinitialize: true,
 
         initialValues: initialValues,
-        validationSchema: Yup.object({
-            fullName: Yup.string()
-                .required('Ismni kiriting!'),
-            phoneNumber: Yup.string()
-                .required('Telefon raqamni kiriting!')
-                .matches(/^[\d\+\-\s\(\)]+$/, 'Noto‘g‘ri telefon raqam'),
-            email: Yup.string()
-                .email('Email noto‘g‘ri!')
-                .required('Emailni kiriting!'),
-            companyName: Yup.string()
-                .required('Kompaniya nomini kiriting!'),
-            position: Yup.string()
-                .required('Lavozimingizni kiriting!'),
-            region: Yup.string()
-                .required('Hududni tanlang!'),
-            comment: Yup.string()
-                .max(500, 'Izoh 500 ta belgidan oshmasligi kerak'),
-        }),
+        validationSchema: validationSchema,
         onSubmit: async (values) => {
             try {
                 await sendStudent(values).unwrap();
-                toast.success('Ariza qabul qilindi ,tez orada aloqaga chiqamiz!');
+                toast.success(t('successSubmit'));
                 validation.resetForm();
             } catch (err) {
                 console.error('Xatolik:', err);
@@ -102,28 +104,19 @@ function Contact() {
                         {/* Contact Form */}
                         <div className="col-lg-6" data-aos="fade-up"
                              data-aos-delay='0.5s'>
-                            <h6 className="text-primary text-uppercase mb-2">Contact Us</h6>
-                            <h1 className="display-6 mb-4">If You are interested, Please Contact Us</h1>
-                            {/*<p className="mb-4">*/}
-                            {/*    The contact form is currently inactive. Get a functional and working contact form with*/}
-                            {/*    Ajax & PHP in a few*/}
-                            {/*    minutes. Just copy and paste the files, add a little code and you're done.{' '}*/}
-                            {/*    <a href="https://htmlcodex.com/contact-form" target="_blank" rel="noopener noreferrer">*/}
-                            {/*        Download Now*/}
-                            {/*    </a>.*/}
-                            {/*</p>*/}
-
-                            <form
-                                onSubmit={(e) => {
-                                    e.preventDefault();
-                                    validation.handleSubmit();
-                                    return false;
-                                }}>
+                            <h6 className="text-primary text-uppercase mb-2">{t("contactUs")}</h6>
+                            <h1 className="display-6 mb-4">{t("contactUsBody")}</h1>
+                            <form key={i18n.language}
+                                  onSubmit={(e) => {
+                                      e.preventDefault();
+                                      validation.handleSubmit();
+                                      return false;
+                                  }}>
                                 <div className="row g-3">
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="text" className="form-control border-0 bg-light"
-                                                   placeholder="Your Name"
+                                                   placeholder={t('name')}
                                                    id="fullName"
                                                    name="fullName"
                                                    onChange={validation.handleChange}
@@ -135,7 +128,7 @@ function Contact() {
                                                     <h6 className="text-danger mt-1">
                                                         {validation.errors.fullName}
                                                     </h6>
-                                                ) : 'Your Name'}
+                                                ) : t('name')}
                                             </label>
                                         </div>
 
@@ -144,7 +137,7 @@ function Contact() {
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="email" className="form-control border-0 bg-light" id="email"
-                                                   placeholder="Your Email"
+                                                   placeholder={t('email')}
                                                    name="email"
                                                    onChange={validation.handleChange}
                                                    onBlur={validation.handleBlur}
@@ -155,7 +148,7 @@ function Contact() {
                                                 <h6 className="text-danger mt-1">
                                                     {validation.errors.email}
                                                 </h6>
-                                            ) : 'Your Email'}</label>
+                                            ) : t('email')}</label>
                                         </div>
                                     </div>
 
@@ -163,7 +156,7 @@ function Contact() {
                                         <div className="form-floating">
                                             <input type="text" className="form-control border-0 bg-light"
                                                    id="phoneNumber"
-                                                   placeholder="phoneNumber"
+                                                   placeholder={t('phoneNumber')}
                                                    name="phoneNumber"
                                                    onChange={validation.handleChange}
                                                    onBlur={validation.handleBlur}
@@ -173,7 +166,7 @@ function Contact() {
                                                 <h6 className="text-danger mt-1">
                                                     {validation.errors.phoneNumber}
                                                 </h6>
-                                            ) : "Phone Number"}</label>
+                                            ) : t('phoneNumber')}</label>
                                         </div>
 
                                     </div>
@@ -181,7 +174,7 @@ function Contact() {
                                         <div className="form-floating">
                                             <input type="text" className="form-control border-0 bg-light"
                                                    id="companyName"
-                                                   placeholder="companyName"
+                                                   placeholder={t('companyName')}
                                                    name="companyName"
                                                    onChange={validation.handleChange}
                                                    onBlur={validation.handleBlur}
@@ -191,13 +184,13 @@ function Contact() {
                                                 <h6 className="text-danger mt-1">
                                                     {validation.errors.companyName}
                                                 </h6>
-                                            ) : 'Company Name'}</label>
+                                            ) : t('companyName')}</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="text" className="form-control border-0 bg-light" id="position"
-                                                   placeholder="position"
+                                                   placeholder={t('position')}
                                                    name="position"
                                                    onChange={validation.handleChange}
                                                    onBlur={validation.handleBlur}
@@ -207,14 +200,14 @@ function Contact() {
                                                     <h6 className="text-danger mt-1">
                                                         {validation.errors.position}
                                                     </h6>
-                                                ) : 'Position'}</label>
+                                                ) : t('position')}</label>
                                         </div>
 
                                     </div>
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="text" className="form-control border-0 bg-light" id="region"
-                                                   placeholder="region"
+                                                   placeholder={t('region')}
                                                    name="region"
                                                    onChange={validation.handleChange}
                                                    onBlur={validation.handleBlur}
@@ -224,7 +217,7 @@ function Contact() {
                                                     <h6 className="text-danger mt-1">
                                                         {validation.errors.region}
                                                     </h6>
-                                                ) : 'Region'}</label>
+                                                ) : t('region')}</label>
                                         </div>
 
                                     </div>
@@ -245,7 +238,7 @@ function Contact() {
                                                     <h6 className="text-danger mt-1">
                                                         {validation.errors.comment}
                                                     </h6>
-                                                ) : 'Comment'}</label>
+                                                ) : t('message')}</label>
                                         </div>
 
                                     </div>
@@ -253,7 +246,7 @@ function Contact() {
                                     <div className="col-12">
                                         <button disabled={isLoading} className="btn btn-primary py-3 px-5 "
                                                 type="submit">
-                                            Send Message
+                                            {t("submit")}
                                             {
                                                 isLoading &&
                                                 <div className="spinner-border ms-2 float-right spinner-border-sm"

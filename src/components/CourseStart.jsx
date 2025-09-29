@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {useTranslation} from "react-i18next";
+import {baseUrl} from "../slices/apiSlice.js";
 
 const CoursesSection = () => {
     const {t, i18n} = useTranslation();
@@ -22,6 +23,7 @@ const CoursesSection = () => {
         const formatted = numStr.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 '); // Raqamlar orasiga bo'shliq qo'shamiz
         return formatted;
     }
+
 
     return (
         <Swiper
@@ -59,10 +61,10 @@ const CoursesSection = () => {
                                     {formatNumber(course?.price)}
                                 </div>
                                 <h5 className="mb-3">{course?.title}</h5>
-                                <p style={{height: '50px'}}>
+                                <p style={{height: '100px'}}>
                                     {course?.description}
                                 </p>
-                                <ol className="breadcrumb justify-content-center mb-0">
+                                <ol className="breadcrumb justify-content-center mb-0" style={{height: '50px'}}>
                                     <li className="breadcrumb-item small">
                                         <i className="fa fa-chalkboard-teacher text-primary me-2"></i>{course?.teacherName}
                                     </li>
@@ -73,11 +75,13 @@ const CoursesSection = () => {
                                 </ol>
                             </div>
                             <div className="position-relative mt-auto">
-                                <img className="img-fluid" src={courses1} alt=""/>
+                                <img className="img-fluid w-100" style={{height: '300px', objectFit: 'cover'}}
+                                     src={`${baseUrl}/files/${course?.filesIds[0]}`}
+                                     alt=""/>
                                 <div className="courses-overlay">
                                     <a className="btn btn-outline-primary border-2"
                                        href={`/contact/${course?.id}`}>
-                                        Ariza qoldirish
+                                        {t("leaveRequest")}
                                     </a>
                                 </div>
                             </div>

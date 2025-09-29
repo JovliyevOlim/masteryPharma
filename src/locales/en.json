@@ -61,5 +61,27 @@
   "ourWaysTwo": "Regional Manager / KAM",
   "ourWaysTwoBody": "Leadership, territory management, KPI handling, coaching, building relationships with pharmacy chains and distributors. This track turns your team into competitive and effective leaders.",
   "ourWaysThree": "Medical Representative",
-  "ourWaysThreeBody": "Effective communication with doctors and pharmacies, organizing short and impactful visits, working with CRM, proper planning and reporting. Each representative grows from an ordinary rep into a trusted expert."
+  "ourWaysThreeBody": "Effective communication with doctors and pharmacies, organizing short and impactful visits, working with CRM, proper planning and reporting. Each representative grows from an ordinary rep into a trusted expert.",
+  "contactUs": "Contact Us",
+  "contactUsBody": "If you are interested, please contact us",
+  "submit": "Submit",
+  "requiredFullName": "Enter your name!",
+  "requiredPhoneNumber": "Enter your phone number!",
+  "invalidPhoneNumber": "Invalid phone number",
+  "requiredEmail": "Enter your email!",
+  "invalidEmail": "Invalid email!",
+  "requiredCompanyName": "Enter your company name!",
+  "requiredPosition": "Enter your position!",
+  "requiredRegion": "Select a region!",
+  "maxComment": "Comment must not exceed 500 characters",
+  "successSubmit": "Application received, we will contact you soon!",
+  "name": "Name",
+  "email": "Email",
+  "phoneNumber": "Phone Number",
+  "companyName": "Company Name",
+  "position": "Position",
+  "region": "Region",
+  "message": "Message",
+  "leaveRequest": "Leave a Request"
+
 }

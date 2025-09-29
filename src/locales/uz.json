@@ -61,5 +61,27 @@
   "ourWaysTwo": "Hududiy menejer / KAM",
   "ourWaysTwoBody": "Liderlik, hududni boshqarish, KPI bilan ishlash, kouçing, dorixona tarmoqlari va distribyutorlar bilan aloqalarni rivojlantirish. Bu yo‘nalish sizning jamoangizni raqobatbardosh va samarali liderlarga aylantiradi.",
   "ourWaysThree": "Tibbiy vakil",
-  "ourWaysThreeBody": "Shifokorlar va dorixonalar bilan samarali muloqot, qisqa va natijali tashriflarni tashkil qilish, CRM bilan ishlash, to‘g‘ri rejalashtirish va hisobot berish. Har bir vakil oddiy vakildan — ishonchli ekspertga aylanadi."
+  "ourWaysThreeBody": "Shifokorlar va dorixonalar bilan samarali muloqot, qisqa va natijali tashriflarni tashkil qilish, CRM bilan ishlash, to‘g‘ri rejalashtirish va hisobot berish. Har bir vakil oddiy vakildan — ishonchli ekspertga aylanadi.",
+  "contactUs": "Biz bilan bog‘lanish",
+  "contactUsBody": "Agar sizni qiziqtirsa, iltimos, biz bilan bog‘laning",
+  "submit": "Yuborish",
+  "requiredFullName": "Ismni kiriting!",
+  "requiredPhoneNumber": "Telefon raqamni kiriting!",
+  "invalidPhoneNumber": "Noto‘g‘ri telefon raqam",
+  "requiredEmail": "Emailni kiriting!",
+  "invalidEmail": "Email noto‘g‘ri!",
+  "requiredCompanyName": "Kompaniya nomini kiriting!",
+  "requiredPosition": "Lavozimingizni kiriting!",
+  "requiredRegion": "Hududni tanlang!",
+  "maxComment": "Izoh 500 ta belgidan oshmasligi kerak",
+  "successSubmit": "Ariza qabul qilindi, tez orada aloqaga chiqamiz!",
+  "name": "Ism",
+  "email": "Email",
+  "phoneNumber": "Telefon raqam",
+  "companyName": "Kompaniya nomi",
+  "position": "Lavozim",
+  "region": "Hudud",
+  "message": "Xabar",
+  "leaveRequest": "Ariza qoldirish"
+
 }
