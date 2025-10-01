@@ -1,21 +1,29 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import img1 from '../assets/img/Picture2.png'
+import img2 from '../assets/img/Picture3.png'
+import img3 from '../assets/img/Picture4.png'
 
 function CourseDirections() {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
 
     const courseWays = [
         {
             title: t("ourWaysOne"),
-            body: t("ourWaysOneBody")
+            body: t("ourWaysOneBody"),
+            img: img1
         },
         {
             title: t("ourWaysTwo"),
-            body: t("ourWaysTwoBody")
+            body: t("ourWaysTwoBody"),
+            img: img2
+
         },
         {
             title: t("ourWaysThree"),
-            body: t("ourWaysThreeBody")
+            body: t("ourWaysThreeBody"),
+            img: img3
+
         },
     ]
     return (
@@ -29,7 +37,7 @@ function CourseDirections() {
                                 <div
                                     className={`col-lg-6 ${i % 2 === 0 ? "order-lg-1" : "order-lg-2"}`}
                                     data-aos="fade-up"
-                                     data-aos-delay='0.5s'>
+                                    data-aos-delay='0.5s'>
                                     <h2 className="text-primary text-uppercase mb-2">{t(`${item.title}`)}</h2>
                                     <h3 className="mb-4">
                                         {t(`${item.body}`)}
@@ -42,7 +50,7 @@ function CourseDirections() {
                                     <div className="position-relative h-100">
                                         <img
                                             className="position-relative w-100 h-100"
-                                            src={"https://i0.wp.com/pharmastate.academy/wp-content/uploads/2021/04/Trainings-Pharma-200421-comp-2.jpg?fit=1920%2C1080&ssl=1"}
+                                            src={item.img}
                                             style={{minHeight: '300px', border: 0}}
                                         />
                                     </div>

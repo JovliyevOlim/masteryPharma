@@ -82,6 +82,7 @@
   "position": "Position",
   "region": "Region",
   "message": "Message",
-  "leaveRequest": "Leave a Request"
+  "leaveRequest": "Leave a Request",
+  "downloadFile": "Download File"
 
 }

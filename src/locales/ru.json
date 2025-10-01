@@ -84,6 +84,7 @@
   "position": "Должность",
   "region": "Регион",
   "message": "Сообщение",
-  "leaveRequest": "Оставить заявку"
+  "leaveRequest": "Оставить заявку",
+  "downloadFile": "Скачать файл"
 
 }

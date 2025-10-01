@@ -82,6 +82,6 @@
   "position": "Lavozim",
   "region": "Hudud",
   "message": "Xabar",
-  "leaveRequest": "Ariza qoldirish"
-
+  "leaveRequest": "Ariza qoldirish",
+  "downloadFile": "Faylni yuklab olish"
 }

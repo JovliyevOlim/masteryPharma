@@ -24,6 +24,14 @@ const CoursesSection = () => {
         return formatted;
     }
 
+    const downloadFile = (url, fileName) => {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
 
     return (
         <Swiper
@@ -73,10 +81,22 @@ const CoursesSection = () => {
                                         {course?.durationHours} Hours
                                     </li>
                                 </ol>
+                                <div style={{height: '50px'}}>
+                                    {
+                                        course?.fileId &&
+                                        <button className={'btn btn-outline-primary border-2'}
+                                                onClick={() => downloadFile(`${baseUrl}/files/${course?.fileId}`, course?.title + ".pdf")}
+                                        >
+                                            {t("downloadFile")}
+                                        </button>
+                                    }
+                                </div>
+
+
                             </div>
                             <div className="position-relative mt-auto">
                                 <img className="img-fluid w-100" style={{height: '300px', objectFit: 'cover'}}
-                                     src={`${baseUrl}/files/${course?.filesIds[0]}`}
+                                     src={course?.imageId ? `${baseUrl}/files/${course?.imageId}` : courses1}
                                      alt=""/>
                                 <div className="courses-overlay">
                                     <a className="btn btn-outline-primary border-2"

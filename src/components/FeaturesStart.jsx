@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import about1 from '../assets/img/about-1.jpg'
-import about2 from '../assets/img/about-2.jpg'
+import about1 from '../assets/pirture6.webp'
+import about2 from '../assets/picture.jpg'
 import AOS from 'aos';
 import {useTranslation} from "react-i18next";
 
