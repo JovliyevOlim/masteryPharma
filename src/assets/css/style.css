@@ -161,6 +161,22 @@
     width: 15%;
 }
 
+@media (max-width: 425px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+    .carousel-caption h1{
+        font-size: 1rem;
+    }
+    .carousel-caption h5{
+        font-size: 0.7rem;
+    }
+    .carousel-caption a{
+        font-size: 0.7rem;
+    }
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     width: 3rem;

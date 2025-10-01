@@ -48,14 +48,14 @@ const HeaderCarousel = () => {
                                 <div className="container">
                                     <div className="row justify-content-center">
                                         <div className="col-lg-7 text-center">
-                                            <h1 className="display-5 text-light mb-5 animate__animated animate__slideInDown">
+                                            <h1 className="display-5 text-light mb-2 mb-md-5 animate__animated animate__slideInDown">
                                                 {slide.title}
                                             </h1>
-                                            <h5 className="text-light mb-5 animate__animated animate__slideInDown">{slide.title2}</h5>
+                                            <h5 className="text-light mb-3 mb-md-5 animate__animated animate__slideInDown">{slide.title2}</h5>
                                             <Link to="/about"
-                                                  className="btn btn-primary py-sm-3 px-sm-5">{t("learnMore")}</Link>
+                                                  className="btn btn-primary py-sm-2 py-md-3 px-sm-5">{t("learnMore")}</Link>
                                             <Link to="/courses"
-                                                  className="btn btn-light py-sm-3 px-sm-5 ms-3">{t("ourCourses")}</Link>
+                                                  className="btn btn-light py-sm-2 py-md-3 px-sm-5 ms-3">{t("ourCourses")}</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@ const HeaderCarousel = () => {
                     border: 'none',
                 }}
             >
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="carousel-control-prev-icon " aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
             </button>
 
