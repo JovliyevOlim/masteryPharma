@@ -24,14 +24,37 @@ const CoursesSection = () => {
         return formatted;
     }
 
-    const downloadFile = (url, fileName) => {
+
+    const getFileById = async (id) => {
+        const response = await fetch(`${baseUrl}/files/${id}`, {
+            method: "GET",
+        });
+
+        if (!response.ok) {
+            throw new Error(`File not found: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        const byteCharacters = atob(data.data); // base64 → binary
+        const byteNumbers = new Array(byteCharacters.length);
+
+        for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+
+        const byteArray = new Uint8Array(byteNumbers);
+        const blob = new Blob([byteArray], {type: data.type});
         const link = document.createElement('a');
-        link.href = url;
-        link.download = fileName;
+        link.href = URL.createObjectURL(blob);
+        link.download = data.name;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+
+        URL.revokeObjectURL(link.href);
     };
+
 
     return (
         <Swiper
@@ -85,7 +108,7 @@ const CoursesSection = () => {
                                     {
                                         course?.fileId &&
                                         <button className={'btn btn-outline-primary border-2'}
-                                                onClick={() => downloadFile(`${baseUrl}/files/${course?.fileId}`, course?.title + ".pdf")}
+                                                onClick={() => getFileById(course?.fileId)}
                                         >
                                             {t("downloadFile")}
                                         </button>
@@ -96,7 +119,7 @@ const CoursesSection = () => {
                             </div>
                             <div className="position-relative mt-auto">
                                 <img className="img-fluid w-100" style={{height: '300px', objectFit: 'cover'}}
-                                     src={course?.imageId ? `${baseUrl}/files/${course?.imageId}` : courses1}
+                                     src={course?.imageId ? `${baseUrl}/files/download/${course?.imageId}` : courses1}
                                      alt=""/>
                                 <div className="courses-overlay">
                                     <a className="btn btn-outline-primary border-2"
