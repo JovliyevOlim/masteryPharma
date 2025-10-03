@@ -37,7 +37,7 @@ function MakeAppoinment() {
         onSubmit: async (values) => {
             try {
                 await sendFeedback(values).unwrap();
-                setMessage("Thanks for your feedback!");
+                setMessage("thanksFeedback");
                 // validation.resetForm();
             } catch (err) {
                 console.error('Xatolik:', err);
@@ -53,12 +53,12 @@ function MakeAppoinment() {
                     {
                         message ?
                             <div className="col-lg-8">
-                                <h1>{message}</h1>
+                                <h1 className={'text-center'}>{t(message)}</h1>
                             </div> : <div className="col-lg-8 my-4"
                                           data-aos="fade-up"
                                           data-aos-delay="0.1s">
                                 <div className="bg-primary text-center p-5 px-4 px-md-5">
-                                    <h1 className="mb-4">Make Appointment</h1>
+                                    <h1 className="mb-4">{t('leaveFeedback')}</h1>
                                     <form
                                         key={i18n.language}
                                         onSubmit={(e) => {
