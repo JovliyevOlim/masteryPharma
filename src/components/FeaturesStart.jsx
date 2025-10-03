@@ -77,10 +77,9 @@ const WhyChooseUs = () => {
                                 style={{objectFit: 'cover'}}
                             />
                             <img
-                                className="position-absolute"
+                                className="vedio-icon"
                                 src={about2}
                                 alt="about2"
-                                style={{width: '200px', height: '150px',top:"35%",left:"35%"}}
                             />
                         </div>
                     </div>

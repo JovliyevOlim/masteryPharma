@@ -50,7 +50,7 @@ const Programs = () => {
             {items.map((item, i) => (
                 <div
                     key={i}
-                    className="col-lg-5 p-lg-4 bg-white"
+                    className="col-lg-5 p-lg-4 bg-white course-direction"
                 >
                     <div className={'p-3 px-0'}>
                         <FontAwesomeIcon icon={item.icon} size="3x" style={{color: "f3bd00"}}/>
