@@ -12,10 +12,19 @@ function CourseHeader() {
                 data-aos-duration={'500'}
                 style={{maxWidth: '800px'}}
             >
-                <h6 className="text-primary text-uppercase mb-2">{t("ourWays")}</h6>
-                <h2 className="mb-4">
-                    {t("ourWaysAbout")}
-                </h2>
+                <h6 className="text-primary text-uppercase mb-2">{t("whyUsTitle")} ?</h6>
+                <h4 className="m-0">
+                    {t("whyPoint1")}
+                </h4>
+                <h4 className="m-0">
+                    {t("whyPoint2")}
+                </h4>
+                <h4 className="m-0">
+                    {t("whyPoint3")}
+                </h4>
+                <h4 className="m-0">
+                    {t("whyPoint4")}
+                </h4>
             </div>
         </>
     );

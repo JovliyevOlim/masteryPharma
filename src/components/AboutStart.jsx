@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
-import about2 from '../assets/Picture1.png'
-import about1 from '../assets/picture5.png'
+import about1 from '../assets/about.png'
 import {useTranslation} from "react-i18next";
 import AOS from 'aos';
 
@@ -20,20 +19,14 @@ const AboutUs = () => {
                          data-aos="fade-up"
                          data-aos-delay={'100'}>
                         <div
-                            className="position-relative overflow-hidden ps-5 pt-5 h-100"
-                            style={{minHeight: '400px'}}
+                            className="position-relative overflow-hidden h-100"
+                            style={{minHeight: '500px'}}
                         >
                             <img
                                 className="position-absolute w-100 h-100"
                                 src={about1}
                                 alt=""
                                 style={{objectFit: 'cover'}}
-                            />
-                            <img
-                                className="position-absolute top-0 start-0 bg-white pe-3 pb-3"
-                                src={about2}
-                                alt=""
-                                style={{width: '200px', height: '200px'}}
                             />
                         </div>
                     </div>
@@ -44,9 +37,10 @@ const AboutUs = () => {
                          data-aos-delay={'500'}>
                         <div className="h-100">
                             <h6 className="text-primary text-uppercase mb-2">{t('about')}</h6>
-                            <h1 className="display-6 mb-4">
-                                {t('aboutUsOne')}
-                            </h1>
+                            <h3 className="mb-4">
+                                Мы разрабатываем и проводим практические программы для медицинских представителей,
+                                продакт-менеджеров и руководителей. В основе — международные методики и локальный опыт
+                                рынка Узбекистана. </h3>
                             <p>
                                 {t('aboutUsTwo')}
                             </p>

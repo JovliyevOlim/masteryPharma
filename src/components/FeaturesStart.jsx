@@ -1,11 +1,23 @@
-import React, {useEffect} from 'react';
-import about1 from '../assets/pirture6.webp'
-import about2 from '../assets/picture.jpg'
+import React, {useEffect, useRef, useState} from 'react';
+import about1 from '../assets/img/carousel-2.jpg'
+import about2 from '../assets/vedio.png'
+import vedio from '../assets/vedio/IMG_9860.MP4'
 import AOS from 'aos';
 import {useTranslation} from "react-i18next";
 
 const WhyChooseUs = () => {
     const {t} = useTranslation();
+
+
+    const [open, setOpen] = useState(false);
+    const videoRef = useRef(null);
+
+    // modal ochilganda videoni avtomatik play qilish
+    useEffect(() => {
+        if (open && videoRef.current) {
+            videoRef.current.play();
+        }
+    }, [open]);
 
     useEffect(() => {
         AOS.init({duration: 800, once: true});
@@ -51,26 +63,67 @@ const WhyChooseUs = () => {
 
                     <div className="col-lg-6"
                          data-aos="fade-up"
-                         data-aos-delay={'0.5s'}>
+                         data-aos-delay={'0.5s'}
+                         onClick={()=>setOpen(true)}
+                         style={{cursor: 'pointer'}}>
                         <div
-                            className="position-relative overflow-hidden pe-5 pt-5 h-100"
+                            className="position-relative overflow-hidden h-100"
                             style={{minHeight: '400px'}}
                         >
                             <img
                                 className="position-absolute w-100 h-100"
                                 src={about1}
-                                alt=""
+                                alt="about1"
                                 style={{objectFit: 'cover'}}
                             />
                             <img
-                                className="position-absolute top-0 end-0 bg-white ps-3 pb-3"
+                                className="position-absolute"
                                 src={about2}
-                                alt=""
-                                style={{width: '200px', height: '200px'}}
+                                alt="about2"
+                                style={{width: '200px', height: '150px',top:"35%",left:"35%"}}
                             />
                         </div>
                     </div>
                 </div>
+
+                {open && (
+                    <div
+                        style={{
+                            position: "fixed",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            background: "rgba(0,0,0,0.85)",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            zIndex: 1000,
+                            flexDirection: "column",
+                        }}
+                    >
+                        {/* Video */}
+                        <video
+                            ref={videoRef}
+                            src={vedio}
+                            controls
+                            style={{ width: "80%", maxHeight: "70%", borderRadius: "12px" }}
+                        />
+
+                        {/* Cancel button */}
+                        <button className={'btn btn-primary mt-3'}
+                            onClick={() => {
+                                if (videoRef.current) {
+                                    videoRef.current.pause(); // yopilganda videoni to‘xtatish
+                                    videoRef.current.currentTime = 0; // boshiga qaytarish
+                                }
+                                setOpen(false);
+                            }}
+                        >
+                            {t("exit")}
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

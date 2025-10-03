@@ -11,12 +11,12 @@ function TeacherDetails() {
 
     return (
         <>
-            <PageHeader title={t('teacher')}/>
+            <PageHeader title={t('trainersTitle')}/>
             <div className="container-xxl py-6">
                 <div className="container">
                     {
                         teachers.filter(item => id == item.id).map((teacher) =>
-                            <div className="row g-5 mt-3">
+                            <div className="row g-5">
                                 <div className="col-lg-4"
                                      data-aos="fade-up"
                                      data-aos-delay={'0.1s'}>
@@ -45,7 +45,7 @@ function TeacherDetails() {
                     }
                     {
                         teachers.filter(item => id != item.id).map((teacher) =>
-                            <div className="row g-5 mt-3">
+                            <div className="row g-5">
                                 {/* Google Maps */}
                                 <div className="col-lg-4"
                                      data-aos="fade-up"

@@ -24,6 +24,7 @@ function App() {
                     <Route path="/courses" element={<Courses/>}/>
                     <Route path="/contact/:id" element={<Contact/>}/>
                     <Route path="/team/:id" element={<TeacherDetails/>}/>
+                    <Route path="/team" element={<TeacherDetails/>}/>
                     <Route path="*" element={<div>404 Not Found</div>}/>
                 </Route>
             </Routes>

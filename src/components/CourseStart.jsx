@@ -89,7 +89,7 @@ const CoursesSection = () => {
                         <div className="courses-item d-flex flex-column bg-white overflow-hidden h-100">
                             <div className="text-center p-4 pt-0">
                                 <div className="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">
-                                    {formatNumber(course?.price)}
+                                    {formatNumber(course?.price)} {t("currency")}
                                 </div>
                                 <h5 className="mb-3">{course?.title}</h5>
                                 <p style={{height: '100px'}}>

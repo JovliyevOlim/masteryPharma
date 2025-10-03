@@ -9,6 +9,7 @@ import Team from "../components/TeamStarts.jsx";
 import CourseHeader from "../components/CourseHeader.jsx";
 import CourseDirections from "../components/CourseDirections.jsx";
 import CourseStart from "../components/CourseStart.jsx";
+import MakeAppoinment from "../components/MakeAppoinment.jsx";
 
 function HomePage() {
 
@@ -20,6 +21,7 @@ function HomePage() {
         <>
             <HeaderCarousel/>
             <Facts/>
+            <FeaturesStart/>
             <AboutUs/>
             <div className="container-xxl courses my-6 py-6 pb-0">
                 <div className="container">
@@ -27,7 +29,7 @@ function HomePage() {
                     <CourseStart/>
                 </div>
             </div>
-            <FeaturesStart/>
+            <MakeAppoinment/>
             <Team/>
             <TestEmotional/>
             <button onClick={scrollToTop} className="btn btn-lg btn-primary btn-lg-square back-to-top"><i

@@ -7,7 +7,7 @@ export const routes = [
         path: '/courses',
         name: 'courses',
     }, {
-        path: '/about',
-        name: 'about',
+        path: '/team',
+        name: 'trainersTitle',
     },
 ]

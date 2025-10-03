@@ -30,8 +30,7 @@ const LanguageDropdown = () => {
     const languages = [
         {name: 'English', value: 'en', flags: "flag-icon-gb"},
         {name: 'Русский', value: 'ru', flags: "flag-icon-ru"},
-        {name: "O'zbek", value: 'uz', flags: "flag-icon-uz"},
-        {name: 'Кирилл', value: 'kr', flags: "flag-icon-uz"},
+        {name: 'Ўзбекча', value: 'kr', flags: "flag-icon-uz"},
     ]
 
     return (
