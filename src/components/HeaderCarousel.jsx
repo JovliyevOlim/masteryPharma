@@ -1,4 +1,6 @@
-import React from "react";;
+import React from "react";
+
+;
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
@@ -15,7 +17,7 @@ const HeaderCarousel = () => {
              style={{position: 'relative'}}>
 
             <div className="position-relative">
-                <img className="w-100" src={carousel1} alt={`slide`}/>
+                <img className="w-100 carousel-image" src={carousel1} alt={`slide`}/>
                 <div className="carousel-caption">
                     <div className="container">
                         <div className="row justify-content-center">

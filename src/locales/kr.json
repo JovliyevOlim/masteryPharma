@@ -94,6 +94,24 @@
   "leaveRequest": "Ариза қолдириш",
   "downloadFile": "Файлни юклаб олиш",
   "testimonialTitle": "Фикрлар",
-  "exit": "Чиқиш"
-
+  "exit": "Чиқиш",
+  "marketingMasteryTitle": "Маркетинг Махорат",
+  "marketingMasteryBody": "Бозорни тушунишдан башоратгача",
+  "marketingMasteryOne": "Маркетинг асослари",
+  "marketingMasteryTwo": "Базавий маркетинг",
+  "marketingMasteryThree": "Илғор маркетинг",
+  "regionalManagementMasteryTitle": "Ҳудудий менежмент махорати / KAM",
+  "regionalManagerBody": "Лидерлик, ҳудудни бошқариш, KPI, коучинг, дорихона тармоқлари ва дистрибьюторлар.",
+  "regionalManagementMasteryOne": "Ҳудудий менежер",
+  "regionalManagementMasteryTwo": "KAM",
+  "medicalRepresentativeMasteryTitle": "Медицина вакили махорати",
+  "medicalRepresentativeMasteryOne": "МП учун курслар",
+  "medicalRepresentativeBody": "Самарали ташриф, шифокорлар ва дорихоналар билан ишлаш, CRM билан ишлаш, режалаштириш ва ҳисобот.",
+  "corporateProgramsTitle": "Корпоратив дастурлар",
+  "corporateProgramsSubtitle": "Биз компания вазифасига мос ўқув дастурларини ишлаб чиқамиз. Дастурлардан:",
+  "corporateProgramsOne": "«Филд Форс: самарадорлик ва назорат» (МП иши, CRM, қўшма ташрифлар)",
+  "corporateProgramsTwo": "«Ҳудудий менежер» (режалаштириш, KPI, жамоани мотивация қилиш)",
+  "corporateProgramsThree": "«Маҳсулотни ишга тушириш (Launch Excellence)»",
+  "corporateProgramsFour": "«Башорат қилиш ва P&L»",
+  "corporateProgramsFive": "«Қисқа ташриф махорати» ва бошқалар"
 }

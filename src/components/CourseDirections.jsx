@@ -1,69 +1,75 @@
-import React from 'react';
+import React from "react";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {
+    faBullhorn,
+    faHandshake,
+    faStethoscope,
+    faBriefcase,
+} from "@fortawesome/free-solid-svg-icons";
 import {useTranslation} from "react-i18next";
-import img1 from '../assets/img/Picture2.png'
-import img2 from '../assets/img/Picture3.png'
-import img3 from '../assets/img/Picture4.png'
 
-function CourseDirections() {
+const Programs = () => {
     const {t} = useTranslation();
-
-    const courseWays = [
+    const items = [
         {
-            title: t("ourWaysOne"),
-            body: t("ourWaysOneBody"),
-            img: img1
+            title: 'marketingMasteryTitle',
+            subtitle: '',
+            list: ['marketingMasteryOne', 'marketingMasteryTwo', 'marketingMasteryThree'],
+            body: 'marketingMasteryBody',
+            icon: faBullhorn,
+            color: "#f97316"
         },
         {
-            title: t("ourWaysTwo"),
-            body: t("ourWaysTwoBody"),
-            img: img2
+            title: "regionalManagementMasteryTitle", subtitle: '',
+            body: 'regionalManagerBody',
 
+            list: ['regionalManagementMasteryOne', 'regionalManagementMasteryTwo'],
+
+            icon: faHandshake, color: "#0ea5a4"
         },
         {
-            title: t("ourWaysThree"),
-            body: t("ourWaysThreeBody"),
-            img: img3
+            title: "medicalRepresentativeMasteryTitle", subtitle: '',
+            body: 'medicalRepresentativeBody',
 
+            list: ['medicalRepresentativeMasteryOne'],
+
+            icon: faStethoscope, color: "#06b6d4"
         },
-    ]
+        {
+            title: "corporateProgramsTitle", subtitle: 'corporateProgramsSubtitle',
+            body: '',
+
+            list: ['corporateProgramsOne', 'corporateProgramsTwo', 'corporateProgramsThree', "corporateProgramsFour", "corporateProgramsFive"],
+
+            icon: faBriefcase, color: "#374151"
+        },
+    ];
+
     return (
-        <>
-            <div className="container-xxl py-6">
-                <div className="container">
-                    {
-                        courseWays.map((item, i) =>
-                            <div className="row g-md-5 mt-2">
-
-                                <div
-                                    className={`col-lg-6 ${i % 2 === 0 ? "order-lg-1" : "order-lg-2"}`}
-                                    data-aos="fade-up"
-                                    data-aos-delay='0.5s'>
-                                    <h2 className="text-primary text-uppercase mb-2">{t(`${item.title}`)}</h2>
-                                    <h3 className="mb-4">
-                                        {t(`${item.body}`)}
-                                    </h3>
-                                </div>
-                                <div className={`col-lg-6 ${i % 2 === 0 ? "order-lg-2" : "order-lg-1"}`}
-                                     data-aos="fade-up"
-                                     data-aos-duration={i * 100}
-                                     style={{minHeight: '300px', objectFit: 'cover'}}>
-                                    <div className="position-relative h-100">
-                                        <img
-                                            className="position-relative w-100 h-100"
-                                            src={item.img}
-                                            style={{minHeight: '300px', border: 0}}
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    }
-
+        <div className="row mx-lg-3 mb-5 gap-5 justify-content-evenly">
+            {items.map((item, i) => (
+                <div
+                    key={i}
+                    className="col-lg-5 p-lg-4 bg-white"
+                >
+                    <div className={'p-3 px-0'}>
+                        <FontAwesomeIcon icon={item.icon} size="3x" style={{color: "f3bd00"}}/>
+                    </div>
+                    <div>
+                        <h5 className="text-lg font-semibold">{t(item.title)}</h5>
+                        <p>{t(item.subtitle)}</p>
+                        <ul>
+                            {
+                                item.list.map((l, i) =>
+                                    <li key={i}>{t(l)}</li>)
+                            }
+                        </ul>
+                        <p>{t(item.body)}</p>
+                    </div>
                 </div>
-            </div>
-        </>
-
+            ))}
+        </div>
     );
-}
+};
 
-export default CourseDirections;
+export default Programs;

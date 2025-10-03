@@ -161,19 +161,10 @@
     width: 15%;
 }
 
-@media (max-width: 425px) {
-    .carousel-control-prev,
-    .carousel-control-next {
-        display: none;
-    }
-    .carousel-caption h1{
-        font-size: 1rem;
-    }
-    .carousel-caption h5{
-        font-size: 0.7rem;
-    }
-    .carousel-caption a{
-        font-size: 0.7rem;
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 450px;
+        object-fit: cover;
     }
 }
 

@@ -63,17 +63,12 @@ function Contact() {
         },
     });
 
-    console.log(validation.errors);
-    console.log(validation.values);
 
     useEffect(() => {
         AOS.init({duration: 800, once: true});
     }, [])
 
 
-    // function showtoast() {
-    //     toast.success('Ariza qabul qilindi ,tez orada aloqaga chiqamiz!');
-    // }
 
     return (
         <>

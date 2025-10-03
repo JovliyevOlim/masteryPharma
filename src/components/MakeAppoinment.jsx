@@ -1,55 +1,131 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import AOS from 'aos';
+import * as Yup from "yup";
+import {useTranslation} from "react-i18next";
+import {useFormik} from "formik";
+import {useSendFeedbackMutation} from "../slices/feedbacks/feedbackApi.js";
 
 function MakeAppoinment() {
+    const {t, i18n} = useTranslation();
     useEffect(() => {
         AOS.init({duration: 800, once: true});
     }, [])
+    const [sendFeedback, {isLoading, isSuccess, error}] = useSendFeedbackMutation();
+    const [message, setMessage] = useState(null);
+
+
+    const [initialValues, setInitialValues] = useState({
+        fullName: "",
+        content: "",
+    });
+
+    const validationSchema = useMemo(
+        () =>
+            Yup.object({
+                fullName: Yup.string().required(t("requiredFullName")),
+                comment: Yup.string().max(500, t("maxComment")),
+            }),
+        [i18n.language] // 🔑 til o‘zgarganda qaytadan schema yaratiladi
+    );
+
+    const validation = useFormik({
+        // enableReinitialize : use this flag when initial values needs to be changed
+        enableReinitialize: true,
+
+        initialValues: initialValues,
+        validationSchema: validationSchema,
+        onSubmit: async (values) => {
+            try {
+                await sendFeedback(values).unwrap();
+                setMessage("Thanks for your feedback!");
+                // validation.resetForm();
+            } catch (err) {
+                console.error('Xatolik:', err);
+            }
+        },
+    });
+
     return (
-        <div className="col-lg-8 my-6 mb-0"
-             data-aos="fade-up"
-             data-aos-delay="0.1s">
-            <div className="bg-primary text-center p-5">
-                <h1 className="mb-4">Make Appointment</h1>
-                <form>
-                    <div className="row g-3">
-                        {[
-                            {id: 'gname', type: 'text', label: 'Your Name'},
-                            {id: 'gmail', type: 'email', label: 'Your Email'},
-                            {id: 'cname', type: 'text', label: 'Courses Type'},
-                            {id: 'cage', type: 'text', label: 'Car Type'},
-                        ].map((input, i) => (
-                            <div className="col-sm-6" key={i}>
-                                <div className="form-floating">
-                                    <input
-                                        type={input.type}
-                                        className="form-control border-0"
-                                        id={input.id}
-                                        placeholder={input.label}
-                                    />
-                                    <label htmlFor={input.id}>{input.label}</label>
+
+        <div className="container-xxl">
+            <div className="container">
+                <div className="row justify-content-center">
+                    {
+                        message ?
+                            <div className="col-lg-8">
+                                <h1>{message}</h1>
+                            </div> : <div className="col-lg-8 my-4"
+                                          data-aos="fade-up"
+                                          data-aos-delay="0.1s">
+                                <div className="bg-primary text-center p-5 px-4 px-md-5">
+                                    <h1 className="mb-4">Make Appointment</h1>
+                                    <form
+                                        key={i18n.language}
+                                        onSubmit={(e) => {
+                                            e.preventDefault();
+                                            validation.handleSubmit();
+                                            return false;
+                                        }}
+                                    >
+                                        <div className="row g-3">
+                                            <div className="col-sm-12">
+                                                <div className="form-floating">
+                                                    <input type="text" className="form-control border-0 bg-light"
+                                                           placeholder={t('name')}
+                                                           id="fullName"
+                                                           name="fullName"
+                                                           onChange={validation.handleChange}
+                                                           onBlur={validation.handleBlur}
+                                                           value={validation.values.fullName || ''}
+                                                    />
+                                                    <label htmlFor="fullName">
+                                                        {validation.touched.fullName && validation.errors.fullName ? (
+                                                            <h6 className="text-danger mt-1">
+                                                                {validation.errors.fullName}
+                                                            </h6>
+                                                        ) : t('name')}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div className="col-12">
+                                                <div className="form-floating">
+                     <textarea
+                         className="form-control border-0 bg-light"
+                         placeholder="Leave a comment here"
+                         id="comment"
+                         onChange={validation.handleChange}
+                         onBlur={validation.handleBlur}
+                         value={validation.values.comment || ''}
+                         style={{height: '150px'}}
+                     ></textarea>
+                                                    <label htmlFor="comment">
+                                                        {validation.touched.comment && validation.errors.comment ? (
+                                                            <h6 className="text-danger mt-1">
+                                                                {validation.errors.comment}
+                                                            </h6>
+                                                        ) : t('message')}</label>
+                                                </div>
+                                            </div>
+                                            <div className="col-12">
+                                                <button disabled={isLoading} className="btn btn-dark py-3 px-5 "
+                                                        type="submit">
+                                                    {t("submit")}
+                                                    {
+                                                        isLoading &&
+                                                        <div className="spinner-border ms-2 float-right spinner-border-sm"
+                                                             role="status">
+                                                            <span className="sr-only">Loading...</span>
+                                                        </div>
+                                                    }
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                        ))}
+                    }
 
-                        <div className="col-12">
-                            <div className="form-floating">
-                    <textarea
-                        className="form-control border-0"
-                        placeholder="Leave a message here"
-                        id="message"
-                        style={{height: '100px'}}
-                    ></textarea>
-                                <label htmlFor="message">Message</label>
-                            </div>
-                        </div>
-                        <div className="col-12">
-                            <button className="btn btn-dark w-100 py-3" type="submit">
-                                Submit
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     );

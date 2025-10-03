@@ -91,6 +91,24 @@
   "leaveRequest": "Leave a Request",
   "downloadFile": "Download File",
   "testimonialTitle": "Testimonials",
-  "exit": "Exit"
-
+  "exit": "Exit",
+  "marketingMasteryTitle": "Marketing Mastery",
+  "marketingMasteryBody": "From market understanding to forecasting",
+  "marketingMasteryOne": "Fundamentals of Marketing",
+  "marketingMasteryTwo": "Basic Marketing",
+  "marketingMasteryThree": "Advanced Marketing",
+  "regionalManagementMasteryTitle": "Regional Management Mastery / KAM",
+  "regionalManagerBody": "Leadership, territory management, KPI, coaching, pharmacy chains and distributors.",
+  "regionalManagementMasteryOne": "Regional Manager",
+  "regionalManagementMasteryTwo": "KAM",
+  "medicalRepresentativeMasteryTitle": "Medical Representative Mastery",
+  "medicalRepresentativeMasteryOne": "Courses for MRs",
+  "medicalRepresentativeBody": "Effective visit, working with doctors and pharmacies, working with CRM, planning and reporting.",
+  "corporateProgramsTitle": "Corporate Programs",
+  "corporateProgramsSubtitle": "We design training tailored to company needs. Among the programs:",
+  "corporateProgramsOne": "“Field Force: Efficiency and Control” (MR work, CRM, joint visits)",
+  "corporateProgramsTwo": "“Regional Manager” (planning, KPI, team motivation)",
+  "corporateProgramsThree": "“Product Launch (Launch Excellence)”",
+  "corporateProgramsFour": "“Forecasting and P&L”",
+  "corporateProgramsFive": "“Short Visit Mastery” and many others"
 }

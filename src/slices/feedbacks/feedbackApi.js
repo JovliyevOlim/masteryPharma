@@ -6,9 +6,17 @@ export const feedBackApi = api.injectEndpoints({
             query: () => '/feedbacks/approved',
             providesTags: ['Feedback'],
         }),
+        sendFeedback: builder.mutation({
+            query: (data) => ({
+                url: '/feedbacks',
+                method: 'POST',
+                body: data,
+            }),
+            invalidatesTags: ['Student'],
+        }),
     }),
 });
 
 export const {
-    useGetFeedBacksQuery,
+    useGetFeedBacksQuery,useSendFeedbackMutation,
 } = feedBackApi;
