@@ -23,7 +23,7 @@ function MakeAppoinment() {
         () =>
             Yup.object({
                 fullName: Yup.string().required(t("requiredFullName")),
-                comment: Yup.string().max(500, t("maxComment")),
+                content: Yup.string().max(500, t("maxComment")),
             }),
         [i18n.language] // 🔑 til o‘zgarganda qaytadan schema yaratiladi
     );
@@ -91,17 +91,17 @@ function MakeAppoinment() {
                                                 <div className="form-floating">
                      <textarea
                          className="form-control border-0 bg-light"
-                         placeholder="Leave a comment here"
-                         id="comment"
+                         placeholder="Leave a content here"
+                         id="content"
                          onChange={validation.handleChange}
                          onBlur={validation.handleBlur}
-                         value={validation.values.comment || ''}
+                         value={validation.values.content || ''}
                          style={{height: '150px'}}
                      ></textarea>
-                                                    <label htmlFor="comment">
-                                                        {validation.touched.comment && validation.errors.comment ? (
+                                                    <label htmlFor="content">
+                                                        {validation.touched.content && validation.errors.content ? (
                                                             <h6 className="text-danger mt-1">
-                                                                {validation.errors.comment}
+                                                                {validation.errors.content}
                                                             </h6>
                                                         ) : t('message')}</label>
                                                 </div>
