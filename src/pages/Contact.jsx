@@ -5,13 +5,15 @@ import {useFormik} from 'formik';
 import * as Yup from 'yup';
 import AOS from 'aos';
 import {useSendStudentMutation} from "../slices/students/studentApi.js";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {toast} from "react-toastify";
+import {useGetCoursesQuery} from "../slices/courses/coursesApi.js";
 
 function Contact() {
     const {t, i18n} = useTranslation();
     const {id} = useParams();
-    const [sendStudent, {isLoading, isSuccess, error}] = useSendStudentMutation();
+    const [sendStudent, {isLoading}] = useSendStudentMutation();
+    const {data: courses = []} = useGetCoursesQuery();
 
 
     const [initialValues, setInitialValues] = useState({
@@ -30,6 +32,7 @@ function Contact() {
         () =>
             Yup.object({
                 fullName: Yup.string().required(t("requiredFullName")),
+                courseId: Yup.string().required(t("selectTraining")),
                 phoneNumber: Yup.string()
                     .required(t("requiredPhoneNumber"))
                     .matches(/^[\d\+\-\s\(\)]+$/, t("invalidPhoneNumber")),
@@ -43,7 +46,6 @@ function Contact() {
             }),
         [i18n.language] // 🔑 til o‘zgarganda qaytadan schema yaratiladi
     );
-
 
 
     const validation = useFormik({
@@ -69,13 +71,29 @@ function Contact() {
     }, [])
 
 
-
     return (
         <>
             <PageHeader title={t('contact')}/>
 
-            <div className="container-xxl py-6">
+            <div className="container-xxl py-6 pt-0">
                 <div className="container">
+                    <div className="row">
+                        <div
+                            className="text-center mx-auto mb-5"
+                            data-aos="fade-up"
+                            data-aos-delay="0.1s"
+                            style={{maxWidth: '1000px'}}
+                        >
+                            <h4>Email : <Link target="_blank" rel="noopener noreferrer"
+                                              to='mailto:mastery.pharma@mail.ru'>mastery.pharma@mail.ru</Link></h4>
+                            <h4>Address : <Link target="_blank" rel="noopener noreferrer" to=''>г. Ташкент</Link></h4>
+                            <h4>Instagram : <Link target="_blank" rel="noopener noreferrer"
+                                                  to='https://www.instagram.com/mastery.pharma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>@mastery.pharma</Link>
+                            </h4>
+                            <h4>Telegram : <Link target="_blank" rel="noopener noreferrer"
+                                                 to='https://t.me/MASTERYpharma'>https://t.me/MASTERYpharma</Link></h4>
+                        </div>
+                    </div>
                     <div className="row g-5">
                         {/* Google Maps */}
                         <div className="col-lg-6"
@@ -99,8 +117,8 @@ function Contact() {
                         {/* Contact Form */}
                         <div className="col-lg-6" data-aos="fade-up"
                              data-aos-delay='0.5s'>
-                            <h6 className="text-primary text-uppercase mb-2">{t("contactUs")}</h6>
-                            <h1 className="display-6 mb-4">{t("contactUsBody")}</h1>
+                            <h3 className="text-primary text-uppercase mb-2">{t("contactUs")}</h3>
+                            <h4 className="mb-4">{t("contactUsBody")}</h4>
                             <form key={i18n.language}
                                   onSubmit={(e) => {
                                       e.preventDefault();
@@ -211,6 +229,31 @@ function Contact() {
                                                 {validation.touched.region && validation.errors.region ? (
                                                     <h6 className="text-danger mt-1">
                                                         {validation.errors.region}
+                                                    </h6>
+                                                ) : t('region')}</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div className="col-md-12">
+                                        <div className="form-floating">
+                                            <select
+                                                className="form-control border-0 bg-light" id="courseId"
+                                                name="courseId"
+                                                onChange={validation.handleChange}
+                                                onBlur={validation.handleBlur}
+                                                value={validation.values.courseId || ''}>
+                                                <option value="">{t("selectTraining")}</option>
+                                                {
+                                                    courses.map(course =>
+                                                        <option value={course.id}>{course.title}</option>
+                                                    )
+                                                }
+                                            </select>
+                                            <label htmlFor="courseId">
+                                                {validation.touched.courseId && validation.errors.courseId ? (
+                                                    <h6 className="text-danger mt-1">
+                                                        {validation.errors.courseId}!
                                                     </h6>
                                                 ) : t('region')}</label>
                                         </div>

@@ -13,18 +13,20 @@ function CourseHeader() {
                 style={{maxWidth: '800px'}}
             >
                 <h6 className="text-primary text-uppercase mb-2">{t("whyUsTitle")} ?</h6>
-                <h4 className="m-0">
-                    {t("whyPoint1")}
-                </h4>
-                <h4 className="m-0">
-                    {t("whyPoint2")}
-                </h4>
-                <h4 className="m-0">
-                    {t("whyPoint3")}
-                </h4>
-                <h4 className="m-0">
-                    {t("whyPoint4")}
-                </h4>
+                <h5>{t('whyBody')}</h5>
+                    {[
+                        {title: t('whyPoint1'), delay: '0.1s'},
+                        {title: t('whyPoint2'), delay: '0.2s'},
+                        {title: t('whyPoint3'), delay: '0.3s'},
+                    ].map((item, i) => (
+                        <p
+                            data-aos="fade-up"
+                            data-aos-delay={item.delay}
+                            key={i}
+                        >
+                            {item.title}
+                        </p>
+                    ))}
             </div>
         </>
     );

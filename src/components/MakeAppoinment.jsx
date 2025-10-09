@@ -49,6 +49,15 @@ function MakeAppoinment() {
 
         <div className="container-xxl">
             <div className="container">
+                <div
+                    className="text-center mx-auto mb-5"
+                    data-aos="fade-up"
+                    data-aos-delay="0.1s"
+                    style={{maxWidth: '1000px'}}
+                >
+                    <h6 className="text-primary text-uppercase mb-2">{t('leaveFeedback')}</h6>
+                    <h4>{t('feedbackBody')}</h4>
+                </div>
                 <div className="row justify-content-center">
                     {
                         message ?

@@ -21,9 +21,10 @@ const Footer = () => {
                                 <i className="fa fa-phone-alt me-3"></i>+998 93 590 93 39
                             </p>
                         </a>
-                        <a href="mailto:z.azizova@mastery-pharma.uz" className={'text-white'}>
+                        <a href="mailto:mastery.pharma@mail.ru" className={'text-white'}>
                             <p className="mb-2">
-                                <i className="fa fa-envelope me-3"></i>z.azizova@mastery-pharma.uz
+                                <i className="fa fa-envelope me-3"></i>
+                                mastery.pharma@mail.ru
                             </p>
                         </a>
 
@@ -55,8 +56,6 @@ const Footer = () => {
                                 className="fab fa-telegram"></i></a>
                             <a target='_blank' className="btn btn-square btn-outline-light me-1" href="#"><i
                                 className="fab fa-youtube"></i></a>
-                            {/*<a className="btn btn-square btn-outline-light me-0" href="#"><i*/}
-                            {/*    className="fab fa-linkedin-in"></i></a>*/}
                         </div>
                     </div>
                 </div>

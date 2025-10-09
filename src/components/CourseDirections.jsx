@@ -37,7 +37,7 @@ const Programs = () => {
         },
         {
             title: "corporateProgramsTitle", subtitle: 'corporateProgramsSubtitle',
-            body: '',
+            body: 'corporateProgramsBody',
 
             list: ['corporateProgramsOne', 'corporateProgramsTwo', 'corporateProgramsThree', "corporateProgramsFour", "corporateProgramsFive"],
 
@@ -57,17 +57,11 @@ const Programs = () => {
                     </div>
                     <div>
                         <h5 className="text-lg font-semibold">{t(item.title)}</h5>
-                        <p>{t(item.subtitle)}</p>
-                        <ul>
-                            {
-                                item.list.map((l, i) =>
-                                    <li key={i}>{t(l)}</li>)
-                            }
-                        </ul>
                         <p>{t(item.body)}</p>
                     </div>
                 </div>
             ))}
+
         </div>
     );
 };

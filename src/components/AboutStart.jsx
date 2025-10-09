@@ -14,33 +14,13 @@ const AboutUs = () => {
         <div className="container-xxl py-6">
             <div className="container">
                 <div className="row g-5">
-                    {/* Left Side Images */}
-                    <div className="col-lg-6"
-                         data-aos="fade-up"
-                         data-aos-delay={'100'}>
-                        <div
-                            className="position-relative overflow-hidden h-100"
-                            style={{minHeight: '500px'}}
-                        >
-                            <img
-                                className="position-absolute w-100 h-100"
-                                src={about1}
-                                alt=""
-                                style={{objectFit: 'cover'}}
-                            />
-                        </div>
-                    </div>
-
-                    {/* Right Side Content */}
                     <div className="col-lg-6"
                          data-aos="fade-up"
                          data-aos-delay={'500'}>
                         <div className="h-100">
                             <h6 className="text-primary text-uppercase mb-2">{t('about')}</h6>
-                            <h3 className="mb-4">
-                                Мы разрабатываем и проводим практические программы для медицинских представителей,
-                                продакт-менеджеров и руководителей. В основе — международные методики и локальный опыт
-                                рынка Узбекистана. </h3>
+                            <h4 className="mb-4">
+                                {t('aboutUsOne')}</h4>
                             <p>
                                 {t('aboutUsTwo')}
                             </p>
@@ -83,6 +63,21 @@ const AboutUs = () => {
                                     </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6"
+                         data-aos="fade-up"
+                         data-aos-delay={'100'}>
+                        <div
+                            className="position-relative overflow-hidden h-100"
+                            style={{minHeight: '500px'}}
+                        >
+                            <img
+                                className="position-absolute w-100 h-100"
+                                src={about1}
+                                alt=""
+                                style={{objectFit: 'cover'}}
+                            />
                         </div>
                     </div>
                 </div>
