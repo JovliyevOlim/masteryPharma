@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import about1 from '../assets/whoBody (1).png'
+import about1 from '../assets/vedio-bg.jpg'
 import about2 from '../assets/vedio.png'
 import vedio from '../assets/vedio/IMG_9860.MP4'
 import AOS from 'aos';
