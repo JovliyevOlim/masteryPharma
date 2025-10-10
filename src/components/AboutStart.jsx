@@ -43,26 +43,6 @@ const AboutUs = () => {
                                     </div>
                                 ))}
                             </div>
-
-                            <div className="row g-4">
-                                <div className="col-sm-6">
-                                    <a className="btn btn-primary py-3 px-5" href="">
-                                        {t("readMore")}
-                                    </a>
-                                </div>
-                                <div className="col-sm-6">
-                                    <a
-                                        className="d-inline-flex align-items-center btn btn-outline-primary border-2 p-2"
-                                        href="tel:+998 93 590 93 39"
-                                    >
-                    <span
-                        className="flex-shrink-0 btn-square bg-primary d-flex align-items-center justify-content-center">
-                      <i className="fa fa-phone-alt text-white"></i>
-                    </span>
-                                        <span className="px-3">+998 93 590 93 39</span>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <div className="col-lg-6"

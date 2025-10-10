@@ -1,11 +1,8 @@
 import React from 'react';
-import {useParams} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {teachers} from "../assets/data/teacher.js";
-import PageHeader from "../components/PageHeader.jsx";
 
 function TeacherDetails() {
-    const {id} = useParams()
     const {t} = useTranslation();
 
 
@@ -25,7 +22,7 @@ function TeacherDetails() {
                         </h4>
                     </div>
                     {
-                        teachers.filter(item => id != item.id).map((teacher) =>
+                        teachers.map((teacher) =>
                             <div className="row g-5">
                                 {/* Google Maps */}
                                 <div className="col-lg-4"

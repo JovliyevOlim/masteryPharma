@@ -23,7 +23,7 @@ function HomePage() {
             {/*<Facts/>*/}
             <FeaturesStart/>
             <ForUs/>
-            <AboutUs/>
+            {/*<AboutUs/>*/}
             <div className="container-xxl courses my-6 py-6 pb-0">
                 <div className="container">
                     <CourseHeader/>

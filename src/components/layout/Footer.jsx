@@ -16,11 +16,6 @@ const Footer = () => {
                         <h2 className="text-primary mb-4">
                             <img src={logoDark} width={140} height={52} className='img-fluid' alt="logo"/>
                         </h2>
-                        <a href="tel:+998 93 590 93 39" className={'text-white'}>
-                            <p className="mb-2">
-                                <i className="fa fa-phone-alt me-3"></i>+998 93 590 93 39
-                            </p>
-                        </a>
                         <a href="mailto:mastery.pharma@mail.ru" className={'text-white'}>
                             <p className="mb-2">
                                 <i className="fa fa-envelope me-3"></i>

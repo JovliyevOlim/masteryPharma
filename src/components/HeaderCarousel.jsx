@@ -27,10 +27,10 @@ const HeaderCarousel = () => {
                                 </h1>
                                 <h1 className="text-light mb-3 mb-md-5 animate__animated animate__slideInDown">{t("slideText1")}
                                 </h1>
-                                <Link to="/about"
-                                      className="btn btn-primary py-sm-2 py-md-3 px-sm-5">{t("learnMore")}</Link>
-                                <Link to="/training"
-                                      className="btn btn-light py-sm-2 py-md-3 px-sm-5 ms-3">{t("ourCourses")}</Link>
+                                {/*<Link to="/about"*/}
+                                {/*      className="btn btn-primary py-sm-2 py-md-3 px-sm-5">{t("learnMore")}</Link>*/}
+                                {/*<Link to="/training"*/}
+                                {/*      className="btn btn-light py-sm-2 py-md-3 px-sm-5 ms-3">{t("ourCourses")}</Link>*/}
                             </div>
                         </div>
                     </div>
