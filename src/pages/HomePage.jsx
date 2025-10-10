@@ -20,7 +20,7 @@ function HomePage() {
     return (
         <>
             <HeaderCarousel/>
-            <Facts/>
+            {/*<Facts/>*/}
             <FeaturesStart/>
             <ForUs/>
             <AboutUs/>
