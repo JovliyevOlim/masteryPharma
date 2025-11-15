@@ -9,11 +9,14 @@ function Feedbacks() {
 
     return (
         <div>
-            <PageHeader title={t('testimonialTitle')}/>
-
-            <MakeAppoinment/>
-            {/*<Team/>*/}
-            <TestEmotional/>
+            {/*<PageHeader title={t('testimonialTitle')}/>*/}
+            <div className="container-xxl py-6">
+                <div className="container">
+                    <MakeAppoinment/>
+                    {/*<Team/>*/}
+                    <TestEmotional/>
+                </div>
+            </div>
         </div>
     );
 }

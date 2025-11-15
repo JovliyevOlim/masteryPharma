@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {useTranslation} from "react-i18next";
 import {baseUrl} from "../slices/apiSlice.js";
+import Experience from "./Experience.jsx";
 
 const CoursesSection = () => {
     const {t, i18n} = useTranslation();
@@ -58,17 +59,18 @@ const CoursesSection = () => {
 
     return (
         <>
-            <div
-                className="text-center mx-auto mb-5"
-                data-aos="fade-up"
-                data-aos-duration={'500'}
-                style={{maxWidth: '800px'}}
-            >
-                <h6 className="text-primary text-uppercase mb-2">{t("upcomingTrainings")}</h6>
-                <h4 className="m-0">
-                    {t('upcomingTrainingsBody')}
-                </h4>
-            </div>
+            {/*<div*/}
+            {/*    className="text-center mx-auto mb-5"*/}
+            {/*    data-aos="fade-up"*/}
+            {/*    data-aos-duration={'500'}*/}
+            {/*    style={{maxWidth: '800px'}}*/}
+            {/*>*/}
+            {/*    <h6 className="text-primary text-uppercase mb-2">{t("upcomingTrainings")}</h6>*/}
+            {/*    <h4 className="m-0">*/}
+            {/*        {t('upcomingTrainingsBody')}*/}
+            {/*    </h4>*/}
+            {/*</div>*/}
+            <Experience/>
             <Swiper
                 modules={[Autoplay, Navigation, Pagination]}
                 spaceBetween={0}

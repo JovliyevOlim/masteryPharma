@@ -9,7 +9,7 @@ import Team from "../components/TeamStarts.jsx";
 import CourseHeader from "../components/CourseHeader.jsx";
 import CourseStart from "../components/CourseStart.jsx";
 import MakeAppoinment from "../components/MakeAppoinment.jsx";
-import ForUs from "../components/ForUs.jsx";
+import ForUsNew from "../components/ForUsNew.jsx";
 
 function HomePage() {
 
@@ -22,7 +22,7 @@ function HomePage() {
             <HeaderCarousel/>
             {/*<Facts/>*/}
             <FeaturesStart/>
-            <ForUs/>
+            <ForUsNew/>
             {/*<AboutUs/>*/}
             <div className="container-xxl courses my-6 py-6 pb-0">
                 <div className="container">

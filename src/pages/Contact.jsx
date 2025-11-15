@@ -73,9 +73,9 @@ function Contact() {
 
     return (
         <>
-            <PageHeader title={t('contact')}/>
+            {/*<PageHeader title={t('contact')}/>*/}
 
-            <div className="container-xxl py-6 pt-0">
+            <div className="container-xxl py-6">
                 <div className="container">
                     <div className="row">
                         <div

@@ -11,7 +11,7 @@ function Courses(props) {
 
     return (
         <>
-            <PageHeader title={t('courses')}/>
+            {/*<PageHeader title={t('courses')}/>*/}
             <div className="container-xxl courses my-6 py-6 pb-0">
                 <div className="container">
                     <CourseHeader/>

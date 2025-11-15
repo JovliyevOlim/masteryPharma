@@ -10,7 +10,7 @@ function About(props) {
 
     return (
         <>
-            <PageHeader title={t('about')}/>
+            {/*<PageHeader title={t('about')}/>*/}
             <AboutStart/>
             <TeacherDetails/>
         </>

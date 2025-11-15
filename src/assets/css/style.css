@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&family=Outfit:wght@500&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 /********** Template CSS **********/
 :root {
     --primary: #F3BD00;
     --secondary: #757575;
     --light: #F3F6F8;
     --dark: #0C2B4B;
-}
 
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
 .py-6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -225,9 +230,6 @@
 /*** Courses ***/
 .courses {
     min-height: 100vh;
-    background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, .9)), url(../img/carousel-1.jpg) center center no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 .courses-item .courses-overlay {
