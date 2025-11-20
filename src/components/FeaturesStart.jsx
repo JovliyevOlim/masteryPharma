@@ -30,15 +30,9 @@ const WhyChooseUs = () => {
                     <div className="col-lg-6"
                          data-aos="fade-up"
                          data-aos-delay={'100'}>
-                        <h6 className="text-primary text-uppercase mb-2">{t("whyChoose")}</h6>
-                        <p className="mb-4">
+                        <h1 className="title text-primary text-uppercase mb-2">{t("whyChoose")}</h1>
+                        <p className="text-body mb-4">
                             {t("aboutCompany")}
-                        </p>
-
-
-                        <h6>{t("whoWeAre")}</h6>
-                        <p>
-                            {t("whoWeAreBody")}
                         </p>
                         <ul>
                             {[
@@ -47,6 +41,7 @@ const WhyChooseUs = () => {
                                 {title: t('forWho3'), delay: '0.3s'},
                             ].map((item, i) => (
                                 <li
+                                    className={'text-body'}
                                     data-aos="fade-up"
                                     data-aos-delay={item.delay}
                                     key={i}

@@ -19,7 +19,7 @@ const ForUsNew = () => {
                          data-aos="fade-up"
                          data-aos-delay={'500'}>
                         <div className="h-100">
-                            <h1 className="text-primary text-uppercase mb-4">{t('forWhoTitle')}</h1>
+                            <h1 className="title text-primary text-uppercase mb-4">{t('forWhoTitle')}</h1>
                             <div className={'row'}>
                                 {Array.from({length: 3}).map((item, i) => (
                                     <div className={'col-12 col-md-4'}
@@ -27,8 +27,8 @@ const ForUsNew = () => {
                                          data-aos-delay={`${100 * i}s`}
                                          key={i}
                                     >
-                                        <h4 className={'mt-2'}>{t(`title_${i + 1}`)}</h4>
-                                        <p>{t(`text_${i + 1}`)}</p>
+                                        <h4 className={'mt-2 text-title'}>{t(`title_${i + 1}`)}</h4>
+                                        <p className="text-body">{t(`text_${i + 1}`)}</p>
                                     </div>
                                 ))}
                             </div>

@@ -84,13 +84,13 @@ function Contact() {
                             data-aos-delay="0.1s"
                             style={{maxWidth: '1000px'}}
                         >
-                            <h4>Email : <Link target="_blank" rel="noopener noreferrer"
+                            <h4 className={"text-title"}>Email : <Link target="_blank" rel="noopener noreferrer"
                                               to='mailto:mastery.pharma@mail.ru'>mastery.pharma@mail.ru</Link></h4>
-                            <h4>Address : <Link target="_blank" rel="noopener noreferrer" to=''>г. Ташкент</Link></h4>
-                            <h4>Instagram : <Link target="_blank" rel="noopener noreferrer"
+                            <h4 className={"text-title"}>Address : <Link target="_blank" rel="noopener noreferrer" to=''>г. Ташкент</Link></h4>
+                            <h4 className={"text-title"}>Instagram : <Link target="_blank" rel="noopener noreferrer"
                                                   to='https://www.instagram.com/mastery.pharma?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=='>@mastery.pharma</Link>
                             </h4>
-                            <h4>Telegram : <Link target="_blank" rel="noopener noreferrer"
+                            <h4 className={"text-title"}>Telegram : <Link target="_blank" rel="noopener noreferrer"
                                                  to='https://t.me/MASTERYpharma'>https://t.me/MASTERYpharma</Link></h4>
                         </div>
                     </div>
@@ -117,8 +117,8 @@ function Contact() {
                         {/* Contact Form */}
                         <div className="col-lg-6" data-aos="fade-up"
                              data-aos-delay='0.5s'>
-                            <h3 className="text-primary text-uppercase mb-2">{t("contactUs")}</h3>
-                            <h4 className="mb-4">{t("contactUsBody")}</h4>
+                            <h3 className="title text-primary text-uppercase mb-2">{t("contactUs")}</h3>
+                            <h4 className="text-title mb-4">{t("contactUsBody")}</h4>
                             <form key={i18n.language}
                                   onSubmit={(e) => {
                                       e.preventDefault();

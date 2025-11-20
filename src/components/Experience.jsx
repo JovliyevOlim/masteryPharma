@@ -18,7 +18,7 @@ const Experience = () => {
                          data-aos="fade-up"
                          data-aos-delay={'500'}>
                         <div className="h-100">
-                            <h1 className="text-primary text-uppercase mb-4">{t('experienceTitle')}</h1>
+                            <h1 className="title text-primary text-uppercase mb-4">{t('experienceTitle')}</h1>
                             <div className={'row'}>
                                 {Array.from({length: 5}).map((item, i) => (
                                     <div className={'col-12'}
@@ -26,8 +26,8 @@ const Experience = () => {
                                          data-aos-delay={`${100 * i}s`}
                                          key={i}
                                     >
-                                        <h4 className={'mt-2'}>{t(`title2_${i + 1}`)}</h4>
-                                        <p>{t(`text2_${i + 1}`)}</p>
+                                        <h4 className={'text-title mt-2'}>{t(`title2_${i + 1}`)}</h4>
+                                        <p className={"text-body"}>{t(`text2_${i + 1}`)}</p>
                                     </div>
                                 ))}
                             </div>

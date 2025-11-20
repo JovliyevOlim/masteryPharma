@@ -39,8 +39,8 @@ const Testimonial = () => {
                     data-aos-delay="0.1s"
                     style={{maxWidth: '500px'}}
                 >
-                    <h6 className="text-primary text-uppercase mb-2">{t("testimonialTitle")}</h6>
-                    <h1 className="display-6 mb-4">{t("whatOurClientsSay")}</h1>
+                    <h6 className="title text-primary text-uppercase mb-2">{t("testimonialTitle")}</h6>
+                    <h1 className="text-title display-6 mb-4">{t("whatOurClientsSay")}</h1>
                 </div>
 
                 <div className="row justify-content-center">

@@ -55,17 +55,20 @@ function MakeAppoinment() {
                     data-aos-delay="0.1s"
                     style={{maxWidth: '1000px'}}
                 >
-                    <h6 className="text-primary text-uppercase mb-2">{t('leaveFeedback')}</h6>
-                    <h4>{t('feedbackBody')}</h4>
+
                 </div>
-                <div className="row justify-content-center">
-                    {
-                        message ?
-                            <div className="col-lg-8">
+                <div className="row gy-3 justify-content-center">
+                    <div className=" col-lg-6">
+                        <h6 className="title text-primary text-uppercase mb-2">{t('leaveFeedback')}</h6>
+                        <p className={"text-body"}>{t('feedbackBody')}</p>
+                    </div>
+                    <div className="col-lg-6" data-aos="fade-up"
+                         data-aos-delay="0.1s">
+                        {
+                            message ?
+
                                 <h1 className={'text-center'}>{t(message)}</h1>
-                            </div> : <div className="col-lg-8 my-4"
-                                          data-aos="fade-up"
-                                          data-aos-delay="0.1s">
+                                :
                                 <div className="bg-primary text-center p-5 px-4 px-md-5">
                                     <h1 className="mb-4">{t('leaveFeedback')}</h1>
                                     <form
@@ -121,8 +124,9 @@ function MakeAppoinment() {
                                                     {t("submit")}
                                                     {
                                                         isLoading &&
-                                                        <div className="spinner-border ms-2 float-right spinner-border-sm"
-                                                             role="status">
+                                                        <div
+                                                            className="spinner-border ms-2 float-right spinner-border-sm"
+                                                            role="status">
                                                             <span className="sr-only">Loading...</span>
                                                         </div>
                                                     }
@@ -131,8 +135,8 @@ function MakeAppoinment() {
                                         </div>
                                     </form>
                                 </div>
-                            </div>
-                    }
+                        }
+                    </div>
 
                 </div>
             </div>

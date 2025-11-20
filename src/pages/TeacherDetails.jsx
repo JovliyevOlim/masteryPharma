@@ -16,8 +16,8 @@ function TeacherDetails() {
                         data-aos-duration={'500'}
                         style={{maxWidth: '800px'}}
                     >
-                        <h6 className="text-primary text-uppercase mb-2">{t("trainersTitle")}</h6>
-                        <h4 className="m-0">
+                        <h6 className="title text-primary text-uppercase mb-2">{t("trainersTitle")}</h6>
+                        <h4 className="text-title m-0">
                             {t("trainersTitleBody")}
                         </h4>
                     </div>
@@ -41,15 +41,15 @@ function TeacherDetails() {
                                 {/* Contact Form */}
                                 <div className="col-lg-8" data-aos="fade-up"
                                      data-aos-delay='0.5s'>
-                                    <h2 className="text-primary text-uppercase mb-2">{t(teacher.name)} - <small
-                                        className={'fs-5 text-secondary'}>{t(teacher.title)}</small>
+                                    <h2 className="title text-primary text-uppercase mb-2">{t(teacher.name)} - <small
+                                        className={'text-title text-secondary'}>{t(teacher.title)}</small>
                                     </h2>
                                     {/*{*/}
                                     {/*    teacher.info.map((item, index) =>*/}
                                     {/*        <h5 key={index} className="mb-3">{t(`${item}`)}</h5>*/}
                                     {/*    )*/}
                                     {/*}*/}
-                                    <h5>{t(teacher.body)}</h5>
+                                    <h4>{t(teacher.body)}</h4>
                                 </div>
                             </div>
                         )

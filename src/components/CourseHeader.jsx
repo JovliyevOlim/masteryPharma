@@ -43,7 +43,7 @@ const CourseHeader = () => {
                          data-aos="fade-up"
                          data-aos-delay={'500'}>
                         <div className="h-100">
-                            <h1 className="text-primary text-uppercase mb-4">{t('ourAdvantagesTitle')}</h1>
+                            <h1 className="title text-primary text-uppercase mb-4">{t('ourAdvantagesTitle')}</h1>
                             <div className={'row gy-5 d-flex justify-content-center align-items-start flex-wrap'}>
                                 {Array.from({length: 4}).map((item, i) => (
                                     <div
@@ -53,10 +53,10 @@ const CourseHeader = () => {
                                         key={i}
                                     >
                                         <div style={{minHeight:'85px'}} className='d-flex gap-2 align-items-start'>
-                                            <span className={'btn btn-warning fs-3'}>0{i + 1}</span>
-                                            <h3> {t(`title1_${i + 1}`)}</h3>
+                                            <span className={'btn btn-warning text-title'}>0{i + 1}</span>
+                                            <h3 className='text-title'> {t(`title1_${i + 1}`)}</h3>
                                         </div>
-                                        <p className={'mt-3'}>{t(`text1_${i + 1}`)}</p>
+                                        <p className={'mt-3 text-body'}>{t(`text1_${i + 1}`)}</p>
                                     </div>
                                 ))}
                             </div>

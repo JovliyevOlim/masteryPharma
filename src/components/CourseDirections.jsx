@@ -56,8 +56,8 @@ const Programs = () => {
                         <FontAwesomeIcon icon={item.icon} size="3x" style={{color: "f3bd00"}}/>
                     </div>
                     <div>
-                        <h5 className="text-lg font-semibold">{t(item.title)}</h5>
-                        <p>{t(item.body)}</p>
+                        <h5 className="text-title font-semibold">{t(item.title)}</h5>
+                        <p className={'text-body'}> {t(item.body)}</p>
                     </div>
                 </div>
             ))}
