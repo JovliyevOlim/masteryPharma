@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import about1 from '../assets/vedio-bg.jpg'
+import about1 from '../assets/whous.jpg'
 import about2 from '../assets/vedio.png'
 import vedio from '../assets/vedio/IMG_9860.MP4'
 import AOS from 'aos';
@@ -54,9 +54,7 @@ const WhyChooseUs = () => {
 
                     <div className="col-lg-6"
                          data-aos="fade-up"
-                         data-aos-delay={'0.5s'}
-                         onClick={() => setOpen(true)}
-                         style={{cursor: 'pointer'}}>
+                         data-aos-delay={'0.5s'}>
                         <div
                             className="position-relative overflow-hidden h-100"
                             style={{minHeight: '400px'}}
@@ -66,11 +64,6 @@ const WhyChooseUs = () => {
                                 src={about1}
                                 alt="about1"
                                 style={{objectFit: 'cover'}}
-                            />
-                            <img
-                                className="vedio-icon"
-                                src={about2}
-                                alt="about2"
                             />
                         </div>
                     </div>
