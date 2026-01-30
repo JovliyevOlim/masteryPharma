@@ -1,112 +1,61 @@
-import React, {useEffect, useRef, useState} from 'react';
-import about1 from '../assets/whous.jpg'
-import about2 from '../assets/vedio.png'
-import vedio from '../assets/vedio/IMG_9860.MP4'
+import React, { useEffect } from 'react';
+import about1 from '../assets/benifit1 (1).png';
 import AOS from 'aos';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const WhyChooseUs = () => {
-    const {t} = useTranslation();
-
-
-    const [open, setOpen] = useState(false);
-    const videoRef = useRef(null);
-
-    // modal ochilganda videoni avtomatik play qilish
-    useEffect(() => {
-        if (open && videoRef.current) {
-            videoRef.current.play();
-        }
-    }, [open]);
+    const { t } = useTranslation();
 
     useEffect(() => {
-        AOS.init({duration: 800, once: true});
+        AOS.init({ duration: 800, once: true });
     }, []);
 
     return (
-        <div className="container-xxl py-6">
+        <div className="container-xxl py-5">
             <div className="container">
-                <div className="row g-5">
-                    <div className="col-lg-6"
-                         data-aos="fade-up"
-                         data-aos-delay={'100'}>
-                        <h1 className="title text-primary text-uppercase mb-2">{t("whyChoose")}</h1>
-                        <p className="text-body mb-4">
-                            {t("aboutCompany")}
-                        </p>
-                        <ul>
-                            {[
-                                {title: t('forWho1'), delay: '0.1s'},
-                                {title: t('forWho2'), delay: '0.2s'},
-                                {title: t('forWho3'), delay: '0.3s'},
-                            ].map((item, i) => (
-                                <li
-                                    className={'text-body'}
-                                    data-aos="fade-up"
-                                    data-aos-delay={item.delay}
-                                    key={i}
-                                >
-                                    {item.title}
-                                </li>
-                            ))}
-                        </ul>
+                <div className="row g-5 align-items-stretch">
+                    {/* Left Column: 3 Text Blocks */}
+                    <div className="col-lg-6 d-flex flex-column justify-content-between gap-3" data-aos="fade-up" data-aos-delay="100">
+
+                        {/* Block 1 */}
+                        <div className="d-flex align-items-center justify-content-start" >
+                            <h2 className="text-uppercase text-start mb-0">
+                                {t('features_block1')}
+                            </h2>
+                        </div>
+
+                        {/* Block 2 */}
+                        <div className="d-flex align-items-center justify-content-start">
+                            <h3 className="mb-0 text-start">
+                                {t('features_block2')}
+                            </h3>
+                        </div>
+
+                        {/* Block 3 */}
+                        <div className="d-flex align-items-center justify-content-start">
+                            <ul className="list-unstyled mb-0 ps-3 w-100">
+                                {[t('features_block3_1'), t('features_block3_2'), t('features_block3_3')].map((text, i) => (
+                                    <li key={i} className="mb-2 fs-4 position-relative">
+                                        {text}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+
                     </div>
 
-                    <div className="col-lg-6"
-                         data-aos="fade-up"
-                         data-aos-delay={'0.5s'}>
-                        <div
-                            className="position-relative overflow-hidden h-100"
-                            style={{minHeight: '400px'}}
-                        >
+                    {/* Right Column: Image */}
+                    <div className="col-lg-6" data-aos="fade-left" data-aos-delay="500">
+                        <div className="position-relative overflow-hidden" style={{ height: '400px', borderRadius: '20px' }}>
                             <img
-                                className="position-absolute w-100 h-100"
+                                className="w-100 h-100"
                                 src={about1}
-                                alt="about1"
-                                style={{objectFit: 'cover'}}
+                                alt="About Us"
+                                style={{ objectFit: 'cover', objectPosition: 'top' }}
                             />
                         </div>
                     </div>
                 </div>
-
-                {open && (
-                    <div
-                        style={{
-                            position: "fixed",
-                            top: 0,
-                            left: 0,
-                            width: "100%",
-                            height: "100%",
-                            background: "rgba(0,0,0,0.85)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            zIndex: 1000,
-                            flexDirection: "column",
-                        }}
-                    >
-                        {/* Video */}
-                        <video
-                            ref={videoRef}
-                            src={vedio}
-                            controls
-                            style={{width: "80%", maxHeight: "70%", borderRadius: "12px"}}
-                        />
-
-                        {/* Cancel button */}
-                        <button className={'btn btn-primary mt-3'}
-                                onClick={() => {
-                                    if (videoRef.current) {
-                                        videoRef.current.pause(); // yopilganda videoni to‘xtatish
-                                        videoRef.current.currentTime = 0; // boshiga qaytarish
-                                    }
-                                    setOpen(false);
-                                }}
-                        >
-                            {t("exit")}
-                        </button>
-                    </div>
-                )}
             </div>
         </div>
     );

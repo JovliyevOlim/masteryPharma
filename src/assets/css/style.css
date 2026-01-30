@@ -8,18 +8,29 @@
     --dark: #0C2B4B;
 
 }
-body{
+
+body {
     font-family: 'Roboto Condensed', sans-serif !important;
 }
-.title{
+
+.title {
     font-size: 2.5rem;
 }
-.text-title{
+
+.text-title {
     font-size: 2rem;
 }
-.text-body{
+
+.text-body {
     font-size: 1.3rem;
 }
+
+@media (max-width: 768px) {
+    .text-body {
+        font-size: 0.8rem;
+    }
+}
+
 .py-6 {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -136,6 +147,8 @@ body{
     }
 }
 
+
+
 @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
@@ -153,13 +166,28 @@ body{
         transition: .5s;
         opacity: 1;
     }
+
+    .image-1 {
+        height: 500px;
+    }
+
+    .image-2 {
+        height: 600px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .image-2 {
+        height: 450px;
+    }
 }
 
 
 /*** Header ***/
-#header-carousel{
+#header-carousel {
     height: calc(100vh - 80px);
 }
+
 .carousel-caption {
     top: 0;
     left: 0;
@@ -192,9 +220,10 @@ body{
 }
 
 @media (max-width: 768px) {
-    #header-carousel{
+    #header-carousel {
         height: 400px;
     }
+
     #header-carousel .carousel-item {
         /*position: relative;*/
         min-height: 450px;
@@ -206,6 +235,7 @@ body{
         height: 100%;
         object-fit: cover;
     }
+
     .carousel-caption {
         position: static;
         margin-top: 1rem;
@@ -221,7 +251,7 @@ body{
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: #999999;
 }
 
@@ -315,7 +345,8 @@ body{
 }
 
 .team-info {
-    height: 110px; /* istalgan balandlik, barcha kartalar uchun bir xil */
+    height: 110px;
+    /* istalgan balandlik, barcha kartalar uchun bir xil */
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,70 +1,73 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import about1 from '../assets/benifit2 (1).png'
 import about2 from '../assets/benifit1 (1).png'
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 import AOS from 'aos';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBriefcase, faUserTie, faUniversity, faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
+import DotGrid from './DotGrid';
 
 const CourseHeader = () => {
-    const {t, i18n} = useTranslation();
+    const { t } = useTranslation();
 
     useEffect(() => {
-        AOS.init({duration: 800, once: true});
+        AOS.init({ duration: 800, once: true });
     }, []);
 
-    return (
-        <div className="container-xxl">
-            <div className="container">
-                <div className="row g-5">
-                    {/* Left Side Images */}
-                    <div className="col-lg-4"
-                         data-aos="fade-up"
-                         data-aos-delay={'100'}>
-                        <div
-                            className="position-relative overflow-hidden h-100"
-                            style={{minHeight: '600px'}}
-                        >
-                            <img
-                                className="position-absolute w-100 h-50"
-                                src={about1}
-                                alt=""
-                                style={{objectFit: 'cover'}}
-                            />
-                            <img
-                                className="position-absolute bottom-0 w-100 h-50"
-                                src={about2}
-                                alt=""
-                                style={{objectFit: 'cover'}}
-                            />
-                        </div>
-                    </div>
+    const contentData = [
+        { icon: faBriefcase, title: t('hww_title_1'), text: t('hww_text_1') },
+        { icon: faUserTie, title: t('hww_title_2'), text: t('hww_text_2') },
+        { icon: faUniversity, title: t('hww_title_3'), text: t('hww_text_3') },
+        { icon: faClipboardCheck, title: t('hww_title_4'), text: t('hww_text_4') },
+    ];
 
-                    {/* Right Side Content */}
-                    <div className="col-lg-8"
-                         data-aos="fade-up"
-                         data-aos-delay={'500'}>
-                        <div className="h-100">
-                            <h1 className="title text-primary text-uppercase mb-4">{t('ourAdvantagesTitle')}</h1>
-                            <div className={'row gy-5 d-flex justify-content-center align-items-start flex-wrap'}>
-                                {Array.from({length: 4}).map((item, i) => (
-                                    <div
-                                        className="col-12 col-md-6"
-                                        data-aos="fade-up"
-                                        data-aos-delay={`${100 * (i + 1)}`}
-                                        key={i}
-                                    >
-                                        <div style={{minHeight:'85px'}} className='d-flex gap-2 align-items-start'>
-                                            <span className={'btn btn-warning text-title'}>0{i + 1}</span>
-                                            <h3 className='text-title'> {t(`title1_${i + 1}`)}</h3>
+    return (
+        <>
+            <div className="d-flex justify-content-between align-items-center mb-3">
+                <div className="col-12 col-md-6">
+                    <h2 className="text-uppercase text-start">{t('howWeWorkTitle')}</h2>
+                </div>
+                <div className="col-4 d-none d-md-flex justify-content-center">
+                    <DotGrid />
+                </div>
+            </div>
+
+            <div className="row g-5">
+
+                {/* Left Side Content (formerly Right) */}
+                <div className="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                    <div className="row g-5 image-2">
+                        {contentData.map((item, index) => (
+                            <div className="col-md-6" key={index}>
+                                <div className="h-100 bg-light p-3" style={{ borderRadius: '4px' }}>
+                                    <h4 className="text-uppercase mb-3 text-title">{item.title}</h4>
+                                    <div className="d-flex align-items-start">
+                                        <div className="me-3 text-warning" style={{ fontSize: '2.2rem', minWidth: '50px' }}>
+                                            <FontAwesomeIcon icon={item.icon} />
                                         </div>
-                                        <p className={'mt-3 text-body'}>{t(`text1_${i + 1}`)}</p>
+                                        <p className="mb-0 text-body" style={{ fontSize: '1rem', lineHeight: '1.5' }}
+                                            dangerouslySetInnerHTML={{ __html: item.text }}
+                                        ></p>
                                     </div>
-                                ))}
+                                </div>
                             </div>
-                        </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Right Side Images (formerly Left) */}
+                <div className="col-lg-4" data-aos="fade-left" data-aos-delay="500">
+                    <div className="position-relative overflow-hidden image-2">
+                        <img
+                            className="w-100 h-100"
+                            src={about1}
+                            alt=""
+                            style={{ objectFit: 'cover', borderRadius: '10px', objectPosition: 'right center' }}
+                        />
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

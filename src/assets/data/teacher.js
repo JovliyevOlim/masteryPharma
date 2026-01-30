@@ -1,6 +1,6 @@
-import team1 from '../img/teacher1.png'
-import team2 from '../img/teacher2.png'
-import team3 from '../img/teacher3.png'
+import team1 from '../img/teacher2-removebg-preview.png'
+import team2 from '../img/teacher3-removebg-preview (1).png'
+import team3 from '../img/teacher4-removebg-preview (1).png'
 
 export const teachers = [
     {

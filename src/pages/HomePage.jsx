@@ -11,28 +11,33 @@ import CourseStart from "../components/CourseStart.jsx";
 import MakeAppoinment from "../components/MakeAppoinment.jsx";
 import ForUsNew from "../components/ForUsNew.jsx";
 
+import Experience from "../components/Experience.jsx";
+
 function HomePage() {
 
     function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'}); // optional: behavior: 'auto'
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // optional: behavior: 'auto'
     }
 
     return (
         <>
-            <HeaderCarousel/>
+            <HeaderCarousel />
             {/*<Facts/>*/}
-            <FeaturesStart/>
-            <ForUsNew/>
-            {/*<AboutUs/>*/}
-            <div className="container-xxl courses my-6 py-6 pb-0">
+            <FeaturesStart />
+            <ForUsNew />
+            <Experience />
+
+            <div className="container-xxl courses py-6 pb-0">
                 <div className="container">
-                    <CourseHeader/>
-                    <CourseStart/>
+                    <CourseHeader />
+                    <CourseStart />
                 </div>
             </div>
-            <MakeAppoinment/>
+            {/* <AboutUs /> */}
+
+            <MakeAppoinment />
             {/*<Team/>*/}
-            <TestEmotional/>
+            <TestEmotional />
             <button onClick={scrollToTop} className="btn btn-lg btn-primary btn-lg-square back-to-top"><i
                 className="bi bi-arrow-up"></i></button>
         </>
