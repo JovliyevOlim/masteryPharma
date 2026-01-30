@@ -1,7 +1,8 @@
 // features/api/apiSlice.js
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
-export const baseUrl = 'https://mastery-pharma.uz/api'
+//export const baseUrl = 'https://mastery-pharma.uz/api'
+export const baseUrl = 'http://95.46.96.160:8081/api'
 
 export const api = createApi({
     reducerPath: 'api',
