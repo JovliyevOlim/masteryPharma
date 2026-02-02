@@ -31,7 +31,7 @@ const Experience = () => {
             <div className="container">
                 <div className="d-flex justify-content-between align-items-center mb-3">
                     <div className="col-12 col-md-6">
-                        <h2 className="text-uppercase">
+                        <h2 className="text-uppercase text-secondary">
                             {t('learningGoalsTitle')}
                         </h2>
                     </div>
@@ -45,7 +45,7 @@ const Experience = () => {
                         <div className="d-flex justify-content-between flex-column gap-3 image-1">
                             {audienceBlocks.map((block, index) => (
                                 <div key={index} className="p-3 bg-light" style={{ borderRadius: '4px' }}>
-                                    <h5 className="text-uppercase text-primary">
+                                    <h5 className="text-uppercase text-secondary">
                                         {block.title}
                                     </h5>
                                     <p className="mb-0 text-dark" style={{ fontSize: '1.2rem', lineHeight: '1.5' }}

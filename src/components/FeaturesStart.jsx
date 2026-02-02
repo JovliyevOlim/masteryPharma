@@ -18,22 +18,22 @@ const WhyChooseUs = () => {
                     <div className="col-lg-6 d-flex flex-column justify-content-between gap-3" data-aos="fade-up" data-aos-delay="100">
 
                         {/* Block 1 */}
-                        <div className="d-flex align-items-center justify-content-start" >
-                            <h2 className="text-uppercase text-start mb-0">
+                        <div className="d-flex align-items-center p-4 bg-light justify-content-start" >
+                            <h2 className="text-uppercase text-start mb-0 text-secondary">
                                 {t('features_block1')}
                             </h2>
                         </div>
 
                         {/* Block 2 */}
-                        <div className="d-flex align-items-center justify-content-start">
-                            <h3 className="mb-0 text-start">
+                        <div className="d-flex align-items-center p-4 bg-light justify-content-start">
+                            <h3 className="mb-0 text-start text-secondary">
                                 {t('features_block2')}
                             </h3>
                         </div>
 
                         {/* Block 3 */}
-                        <div className="d-flex align-items-center justify-content-start">
-                            <ul className="list-unstyled mb-0 ps-3 w-100">
+                        <div className="d-flex align-items-center bg-light justify-content-start">
+                            <ul className="list-unstyled mb-0 p-4 w-100">
                                 {[t('features_block3_1'), t('features_block3_2'), t('features_block3_3')].map((text, i) => (
                                     <li key={i} className="mb-2 fs-4 position-relative">
                                         {text}

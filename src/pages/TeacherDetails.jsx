@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { teachers } from "../assets/data/teacher.js";
 import Teachers from '../components/Teachers.jsx';
 import Programma from '../components/Programma.jsx';
+import Format from '../components/Format.jsx';
 
 function TeacherDetails() {
     const { t } = useTranslation();
@@ -21,8 +22,9 @@ function TeacherDetails() {
                             {t("trainersTitleBody")}
                         </h4>
                     </div> */}
-            <Programma />
             <Teachers />
+            <Programma />
+            <Format />
             {/* {
                             teachers.map((teacher) =>
                                 <div className="row g-5">

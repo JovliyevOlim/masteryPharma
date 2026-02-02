@@ -212,10 +212,176 @@
   "trainer3_edu": "Education: higher medical, clinical pharmacology. MBA.",
   "trainer3_certs": "Training certificates: effective visit skills, team management, marketing, etc.",
   "programTitle": "TRAINING PROGRAM",
-  "prog_card1_title": "Medical Representatives",
-  "prog_card1_content": "<h6 class='fw-bold mb-1'>Visit Skills</h6><ul class='mb-2 ps-3 small'><li>Efficient visit technique</li><li>Mastery of short visits</li><li>Handling objections</li><li>Working with difficult clients</li><li>Client types</li><li>Building long-term relationships</li></ul><h6 class='fw-bold mb-1'>Planning and Analysis</h6><ul class='mb-2 ps-3 small'><li>CRM and reporting</li><li>Visit planning</li><li>Client prioritization by potential</li><li>Competitor and market monitoring</li><li>Analysis of own performance</li><li>Action plan based on analysis</li></ul><h6 class='fw-bold mb-1'>Working in a Competitive Environment</h6><ul class='mb-2 ps-3 small'><li>Behavior in tough competition</li><li>Ethics and compliance</li></ul><h6 class='fw-bold mb-1'>Personal Skills</h6><ul class='mb-0 ps-3 small'><li>Time management</li><li>Emotional intelligence</li><li>Personal effectiveness</li></ul>",
-  "prog_card2_title": "Regional and KAM Managers",
-  "prog_card2_content": "<h6 class='fw-bold mb-1'>Role and Tasks</h6><ul class='mb-2 ps-3 small'><li>Priorities and KPIs</li></ul><h6 class='fw-bold mb-1'>Territory and Team Management</h6><ul class='mb-2 ps-3 small'><li>Territory management</li><li>Potential and workload analysis</li><li>Execution control</li><li>Med Rep effectiveness and motivation</li><li>Result evaluation</li><li>Individual development plans</li></ul><h6 class='fw-bold mb-1'>Control and Reporting</h6><ul class='mb-2 ps-3 small'><li>Excel, CRM, dashboards</li><li>Turning reports into action plans</li></ul><h6 class='fw-bold mb-1'>Field Management</h6><ul class='mb-2 ps-3 small'><li>Double visits</li><li>Working with complex clients</li></ul><h6 class='fw-bold mb-1'>Working with Key Partners</h6><ul class='mb-0 ps-3 small'><li>Chains and distributors</li><li>Negotiations, client files, joint projects</li><li>Pharmacy chains, hospitals, tenders, government structures</li></ul>",
-  "prog_card3_title": "Marketing Department",
-  "prog_card3_content": "<h6 class='fw-bold mb-1'>Marketing Basics</h6><ul class='mb-2 ps-3 small'><li>Product life cycle (Rx/OTC)</li><li>Basic medical expertise</li><li>Market analysis</li><li>Pricing and price analysis</li><li>Product SWOT analysis</li><li>Positioning and USP</li><li>Targeting and segmentation</li><li>Product strategy</li></ul><h6 class='fw-bold mb-1'>Activity Planning</h6><ul class='mb-2 ps-3 small'><li>Efficiency of marketing channels</li><li>Presentations for doctors, pharmacies, and FF</li></ul><h6 class='fw-bold mb-1'>Resource Management</h6><ul class='mb-2 ps-3 small'><li>Time management</li><li>Selection of promising molecules</li><li>FF cost planning and calculation</li></ul><h6 class='fw-bold mb-1'>Financial and Business Planning</h6><ul class='mb-2 ps-3 small'><li>Sales forecasting and analysis</li><li>Marketing and business planning</li><li>Product and company P&L structure</li></ul><h6 class='fw-bold mb-1'>Product Launch</h6><ul class='mb-0 ps-3 small'></ul>"
+  "program_cards": [
+    {
+      "title": "Medical Representatives",
+      "sections": [
+        {
+          "title": "Visit Skills",
+          "items": [
+            "Efficient visit technique",
+            "Mastery of short visits",
+            "Handling objections",
+            "Working with difficult clients",
+            "Client types",
+            "Building long-term relationships"
+          ]
+        },
+        {
+          "title": "Planning and Analysis",
+          "items": [
+            "CRM and reporting",
+            "Visit planning",
+            "Client prioritization by potential",
+            "Competitor and market monitoring",
+            "Analysis of own performance",
+            "Action plan based on analysis"
+          ]
+        },
+        {
+          "title": "Working in a Competitive Environment",
+          "items": [
+            "Behavior in tough competition",
+            "Ethics and compliance"
+          ]
+        },
+        {
+          "title": "Personal Skills",
+          "items": [
+            "Time management",
+            "Emotional intelligence",
+            "Personal effectiveness"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Regional and KAM Managers",
+      "sections": [
+        {
+          "title": "Role and Tasks",
+          "items": [
+            "Priorities and KPIs"
+          ]
+        },
+        {
+          "title": "Territory and Team Management",
+          "items": [
+            "Territory management",
+            "Potential and workload analysis",
+            "Execution control",
+            "Med Rep effectiveness and motivation",
+            "Result evaluation",
+            "Individual development plans"
+          ]
+        },
+        {
+          "title": "Control and Reporting",
+          "items": [
+            "Excel, CRM, dashboards",
+            "Turning reports into action plans"
+          ]
+        },
+        {
+          "title": "Field Management",
+          "items": [
+            "Double visits",
+            "Working with complex clients"
+          ]
+        },
+        {
+          "title": "Working with Key Partners",
+          "items": [
+            "Chains and distributors",
+            "Negotiations, client files, joint projects",
+            "Pharmacy chains, hospitals, tenders, government structures"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Marketing Department",
+      "sections": [
+        {
+          "title": "Marketing Basics",
+          "items": [
+            "Product life cycle (Rx/OTC)",
+            "Basic medical expertise",
+            "Market analysis",
+            "Pricing and price analysis",
+            "Product SWOT analysis",
+            "Positioning and USP",
+            "Targeting and segmentation",
+            "Product strategy"
+          ]
+        },
+        {
+          "title": "Activity Planning",
+          "items": [
+            "Efficiency of marketing channels",
+            "Presentations for doctors, pharmacies, and FF"
+          ]
+        },
+        {
+          "title": "Resource Management",
+          "items": [
+            "Time management",
+            "Selection of promising molecules",
+            "FF cost planning and calculation"
+          ]
+        },
+        {
+          "title": "Financial and Business Planning",
+          "items": [
+            "Sales forecasting and analysis",
+            "Marketing and business planning",
+            "Product and company P&L structure"
+          ]
+        },
+        {
+          "title": "Product Launch",
+          "items": []
+        }
+      ]
+    }
+  ],
+  "formatTitle": "FORMAT AND PRICE",
+  "formatSectionTitle": "Format",
+  "programHeader": "PROGRAM",
+  "durationHeader": "DURATION",
+  "groupHeader": "GROUP",
+  "row1Title": "MEDICAL REPRESENTATIVES",
+  "row1Subtitle": "Effective visits",
+  "row1Duration": "24 hours",
+  "row1Group": "8-20 people",
+  "row2Title": "REGIONAL AND KAM MANAGERS",
+  "row2Subtitle": "Regional and KAM management",
+  "row2Duration": "24 hours",
+  "row2Group": "5-10 people",
+  "row3Title": "MARKETING DEPARTMENT",
+  "row3Subtitle1": "Fundamentals and basic course",
+  "row3Subtitle2": "Advanced course",
+  "row3Duration": "24 hours",
+  "row3Group": "4-10 people",
+  "formatFooter": "* adapted to company specifics",
+  "costAffectsTitle": "What affects the cost",
+  "costAffects1": "Number of trainings (package discounts)",
+  "costAffects2": "Number of participants",
+  "costAffects3": "Program format (topics and duration)",
+  "costAffects4": "Degree of material adaptation",
+  "costIncludesTitle": "What is included in the cost",
+  "costIncludes1": "Adaptation of materials for the company",
+  "costIncludes2": "Conducting the training",
+  "costIncludes3": "All training materials",
+  "costIncludes4": "Entrance/final testing/4 months",
+  "costIncludes5": "Certificates, notebooks",
+  "contact_main_title": "The pharma market changes faster than teams can adapt",
+  "contact_box1_text": "New rules and growing competition require skill updates and professional development.",
+  "contact_box2_text": "Take a step from skills to MASTERY!",
+  "contact_info_title": "CONTACT DETAILS",
+  "contact_label_email": "Email:",
+  "contact_label_tg": "Telegram:",
+  "contact_label_insta": "Instagram:",
+  "contact_label_web": "Website:",
+  "contact_label_phone": "Cont. tel:"
 }

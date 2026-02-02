@@ -18,7 +18,7 @@ const DotGrid = () => {
                 {Array.from({ length: totalDots }).map((_, index) => (
                     <div
                         key={index}
-                        className="bg-primary"
+                        className="bg-secondary"
                         style={{
                             width: '6px',
                             height: '6px',

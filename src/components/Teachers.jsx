@@ -28,7 +28,7 @@ function Teachers() {
             {/* Header Row: Title + DotGrid */}
             <div className="d-flex justify-content-between align-items-center mt-3 mb-5">
                 <div className="col-12 col-md-6">
-                    <h3 className="text-uppercase mb-0" style={{ fontWeight: '800' }}>
+                    <h3 className="text-uppercase mb-0 text-secondary" style={{ fontWeight: '800' }}>
                         {t("ourTrainersTitle")}
                     </h3>
                 </div>
@@ -57,7 +57,7 @@ function Teachers() {
 
                                 {/* Content Section */}
                                 <div className="p-4">
-                                    <h4 className="mb-3 text-dark text-start" style={{ fontWeight: '800' }}>
+                                    <h4 className="mb-3  text-start text-secondary" style={{ fontWeight: '800' }}>
                                         {data.name}
                                     </h4>
                                     <div className="mb-3">

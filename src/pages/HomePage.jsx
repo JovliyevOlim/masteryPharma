@@ -35,10 +35,10 @@ function HomePage() {
             </div>
             {/* <AboutUs /> */}
 
-            <MakeAppoinment />
+            {/* <MakeAppoinment /> */}
             {/*<Team/>*/}
-            <TestEmotional />
-            <button onClick={scrollToTop} className="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+            {/* <TestEmotional /> */}
+            <button onClick={scrollToTop} className="btn btn-lg btn-secondary btn-lg-square back-to-top"><i
                 className="bi bi-arrow-up"></i></button>
         </>
     );

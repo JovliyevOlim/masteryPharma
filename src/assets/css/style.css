@@ -2,8 +2,8 @@
 
 /********** Template CSS **********/
 :root {
-    --primary: #F3BD00;
-    --secondary: #757575;
+    --primary: #525a5e;
+    --secondary: #525a5e;
     --light: #F3F6F8;
     --dark: #0C2B4B;
 
@@ -250,7 +250,7 @@ body {
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: #999999;
 }
 
@@ -477,4 +477,13 @@ body {
         width: 200px;
         height: 150px;
     }
+}
+
+.rounded-5 {
+    border-radius: 2.2rem;
+}
+
+.form-control:focus {
+    border-color: var(--secondary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(82, 90, 94, 0.25) !important;
 }
