@@ -21,8 +21,8 @@ function TeacherDetails() {
                             {t("trainersTitleBody")}
                         </h4>
                     </div> */}
-            <Teachers />
             <Programma />
+            <Teachers />
             {/* {
                             teachers.map((teacher) =>
                                 <div className="row g-5">

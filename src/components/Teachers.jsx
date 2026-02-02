@@ -26,7 +26,7 @@ function Teachers() {
     return (
         <>
             {/* Header Row: Title + DotGrid */}
-            <div className="d-flex justify-content-between align-items-center mb-5">
+            <div className="d-flex justify-content-between align-items-center mt-3 mb-5">
                 <div className="col-12 col-md-6">
                     <h3 className="text-uppercase mb-0" style={{ fontWeight: '800' }}>
                         {t("ourTrainersTitle")}
