@@ -46,7 +46,7 @@ const CourseHeader = () => {
                                         <div className="me-3 text-secondary" style={{ fontSize: '2.2rem', minWidth: '50px' }}>
                                             <img src={item.icon} width={50} height={50} alt="" />
                                         </div>
-                                        <p className="mb-0 text-body text-secondary" style={{ fontSize: '1rem', lineHeight: '1.5' }}
+                                        <p className="mb-0 text-body text-secondary new-title"
                                             dangerouslySetInnerHTML={{ __html: item.text }}
                                         ></p>
                                     </div>

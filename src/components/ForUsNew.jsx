@@ -61,8 +61,8 @@ const ForUsNew = () => {
                                         <img src={item.icon} width={50} height={50} alt="icon1" />
 
                                     </div>
-                                    <div className="p-4 rounded d-flex align-items-center bg-light" style={{ height: '100px', paddingLeft: '40px' }}>
-                                        <p className="mb-0 text-dark ms-3 text-body"
+                                    <div className="p-4 rounded d-flex align-items-center bg-light" style={{ height: '110px', paddingLeft: '40px' }}>
+                                        <p className="mb-0 text-dark ms-3  fs-4 text-body"
                                             dangerouslySetInnerHTML={{ __html: item.text }}
                                         ></p>
                                     </div>
@@ -91,8 +91,8 @@ const ForUsNew = () => {
                                         }}>
                                         <img src={item.icon} width={50} height={50} alt="icon1" />
                                     </div>
-                                    <div className="p-4 rounded d-flex align-items-center bg-light" style={{ height: '100px', paddingLeft: '40px' }}>
-                                        <p className="mb-0  text-dark ms-3 text-body"
+                                    <div className="p-4 rounded d-flex align-items-center bg-light" style={{ height: '110px', paddingLeft: '40px' }}>
+                                        <p className="mb-0  text-dark ms-3  fs-4 text-body"
                                             dangerouslySetInnerHTML={{ __html: item.text }}
                                         ></p>
                                     </div>

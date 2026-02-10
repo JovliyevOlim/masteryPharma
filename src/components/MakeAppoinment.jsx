@@ -60,7 +60,7 @@ function MakeAppoinment() {
                 <div className="row gy-3 justify-content-center">
                     <div className=" col-lg-6">
                         <h6 className="title text-secondary text-uppercase mb-2">{t('leaveFeedback')}</h6>
-                        <p className={"text-body"}>{t('feedbackBody')}</p>
+                        <p className={"text-body  fs-4"}>{t('feedbackBody')}</p>
                     </div>
                     <div className="col-lg-6" data-aos="fade-up"
                         data-aos-delay="0.1s">

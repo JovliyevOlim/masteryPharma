@@ -46,24 +46,24 @@ const ContactTop = () => {
                             <div className="row">
                                 <div className="col-md-10">
                                     <div className="d-flex mb-2">
-                                        <span className="fw-bold text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_email')}</span>
-                                        <span className="text-dark">mastery.pharma@mail.ru</span>
+                                        <span className="fw-bold  fs-4 text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_email')}</span>
+                                        <a href="mailto:mastery.pharma@mail.ru" className="text-dark fs-4">mastery.pharma@mail.ru</a>
                                     </div>
                                     <div className="d-flex mb-2">
-                                        <span className="fw-bold text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_tg')}</span>
-                                        <a href="https://t.me/MASTERYpharma" target="_blank" rel="noreferrer" className="text-dark text-decoration-none">https://t.me/MASTERYpharma</a>
+                                        <span className="fw-bold  fs-4 text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_tg')}</span>
+                                        <a href="https://t.me/MASTERYpharma" target="_blank" rel="noreferrer" className="text-dark text-decoration-none fs-4">https://t.me/MASTERYpharma</a>
                                     </div>
                                     <div className="d-flex mb-2">
-                                        <span className="fw-bold text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_insta')}</span>
-                                        <span className="text-dark">@mastery.pharma</span>
+                                        <span className="fw-bold  fs-4 text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_insta')}</span>
+                                        <a href="https://www.instagram.com/mastery.pharma/" target="_blank" rel="noreferrer" className="text-dark fs-4">@mastery.pharma</a>
                                     </div>
                                     <div className="d-flex mb-2">
-                                        <span className="fw-bold text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_web')}</span>
-                                        <span className="text-dark">mastery-pharma.uz</span>
+                                        <span className="fw-bold  fs-4 text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_web')}</span>
+                                        <a href="https://mastery-pharma.uz/" target="_blank" rel="noreferrer" className="text-dark fs-4">mastery-pharma.uz</a>
                                     </div>
                                     <div className="d-flex mb-0">
-                                        <span className="fw-bold text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_phone')}</span>
-                                        <span className="text-dark">+99890 480 73 90</span>
+                                        <span className="fw-bold  fs-4 text-secondary" style={{ minWidth: '100px' }}>{t('contact_label_phone')}</span>
+                                        <a href="tel:+998904807390" className="text-dark fs-4">+99890 480 73 90</a>
                                     </div>
                                 </div>
                             </div>

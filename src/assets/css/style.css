@@ -25,6 +25,16 @@ body {
     font-size: 1.3rem;
 }
 
+.new-title {
+    font-size: 24px;
+}
+
+@media (min-width: 991.98px) and (max-width: 1200px) {
+    .new-title {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .text-body {
         font-size: 0.8rem;
@@ -167,7 +177,7 @@ body {
     }
 
     .image-1 {
-        height: 500px;
+        height: 600px;
     }
 
     .image-2 {
@@ -177,7 +187,7 @@ body {
 
 @media (min-width: 1400px) {
     .image-2 {
-        height: 450px;
+        height: 610px;
     }
 }
 

@@ -45,10 +45,10 @@ const Experience = () => {
                         <div className="d-flex justify-content-between flex-column gap-3 image-1">
                             {audienceBlocks.map((block, index) => (
                                 <div key={index} className="p-3 bg-light" style={{ borderRadius: '4px' }}>
-                                    <h5 className="text-uppercase text-secondary">
+                                    <h5 className="text-uppercase  fs-4 text-secondary">
                                         {block.title}
                                     </h5>
-                                    <p className="mb-0 text-dark" style={{ fontSize: '1.2rem', lineHeight: '1.5' }}
+                                    <p className="mb-0 text-dark  fs-4" style={{ fontSize: '1.2rem', lineHeight: '1.5' }}
                                         dangerouslySetInnerHTML={{ __html: block.text }}
                                     ></p>
                                 </div>

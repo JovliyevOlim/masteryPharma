@@ -40,7 +40,7 @@ const Testimonial = () => {
                     style={{ maxWidth: '500px' }}
                 >
                     <h6 className="title text-primary text-uppercase mb-2 text-secondary">{t("testimonialTitle")}</h6>
-                    <h1 className="text-title display-6 mb-4 text-secondary">{t("whatOurClientsSay")}</h1>
+                    <h1 className="text-title display-6 mb-4  text-secondary">{t("whatOurClientsSay")}</h1>
                 </div>
 
                 <div className="row justify-content-center">
