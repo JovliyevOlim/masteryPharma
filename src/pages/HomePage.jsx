@@ -30,7 +30,7 @@ function HomePage() {
             <div className="container-xxl courses py-6 pb-0">
                 <div className="container">
                     <CourseHeader />
-                    <CourseStart />
+                    {/* <CourseStart /> */}
                 </div>
             </div>
             {/* <AboutUs /> */}

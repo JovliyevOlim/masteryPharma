@@ -106,7 +106,7 @@ function MakeAppoinment() {
                                                         placeholder="Leave a content here"
                                                         id="content"
                                                         name="content" // added name attribute which was missing in reference but likely needed for Formik
-                                                        maxLength={100} // Added maxLength
+                                                        maxLength={200} // Added maxLength
                                                         onChange={validation.handleChange}
                                                         onBlur={validation.handleBlur}
                                                         value={validation.values.content || ''}

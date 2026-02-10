@@ -4,6 +4,7 @@ import { teachers } from "../assets/data/teacher.js";
 import Teachers from '../components/Teachers.jsx';
 import Programma from '../components/Programma.jsx';
 import Format from '../components/Format.jsx';
+import CourseStart from '../components/CourseStart.jsx';
 
 function TeacherDetails() {
     const { t } = useTranslation();
@@ -24,6 +25,7 @@ function TeacherDetails() {
                     </div> */}
             <Teachers />
             <Programma />
+            <CourseStart />
             <Format />
             {/* {
                             teachers.map((teacher) =>

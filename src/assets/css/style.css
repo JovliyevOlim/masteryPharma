@@ -497,3 +497,7 @@ body {
     border-color: var(--secondary) !important;
     box-shadow: 0 0 0 0.25rem rgba(82, 90, 94, 0.25) !important;
 }
+
+.swiper-wrapper {
+    gap: 1.5rem;
+}
